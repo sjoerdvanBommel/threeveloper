@@ -23,7 +23,8 @@ function ThreeScene() {
   return (
     <Canvas>
       <ambientLight />
-      <pointLight position={[5, 5, 5]} />
+      <pointLight position={[5, 5, 5]} intensity={5} />
+      <axesHelper args={[10]} />
       <Box />
     </Canvas>
   );
