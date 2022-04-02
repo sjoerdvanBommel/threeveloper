@@ -1,4 +1,4 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { DoubleSide, Mesh, Shape } from "three";
 import "./App.css";
@@ -35,15 +35,6 @@ function Box() {
   );
 }
 
-function Controls() {
-  const {
-    camera,
-    gl: { domElement }
-  } = useThree();
-
-  return <orbitControls args={[camera, domElement]} />
-}
-
 function ThreeScene() {
   return (
     <Canvas>
@@ -51,7 +42,6 @@ function ThreeScene() {
       <pointLight position={[5, 5, 5]} intensity={3} />
       <pointLight position={[-3, -3, 2]} />
       <axesHelper args={[10]} />
-      <Controls />
       <Box />
     </Canvas>
   );
