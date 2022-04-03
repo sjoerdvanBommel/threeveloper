@@ -81,8 +81,8 @@ function ThreeScene() {
       <pointLight position={[8, 8,0]} intensity={3} />
       <OrbitControls />
       <Sun />
-      {/* <AnimatedFov /> */}
-      <AnimatePos />
+      <AnimatedFov />
+      {/* <AnimatePos /> */}
       <Balls amount={500} />
     </Canvas>
   );
