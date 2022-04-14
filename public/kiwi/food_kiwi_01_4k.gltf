@@ -1,0 +1,156 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v1.6.16",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "food_kiwi_01"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "food_kiwi_01",
+      "normalTexture": {
+        "index": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0,
+        "metallicRoughnessTexture": {
+          "index": 2
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "kiwi_lores.001",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ],
+  "images": [
+    {
+      "mimeType": "image/jpeg",
+      "name": "food_kiwi_01_nor_gl",
+      "uri": "textures/food_kiwi_01_nor_gl_4k.jpg"
+    },
+    {
+      "mimeType": "image/jpeg",
+      "name": "food_kiwi_01_diff",
+      "uri": "textures/food_kiwi_01_diff_4k.jpg"
+    },
+    {
+      "mimeType": "image/jpeg",
+      "name": "food_kiwi_01_rough",
+      "uri": "textures/food_kiwi_01_rough_4k.jpg"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4313,
+      "max": [
+        0.03449317067861557,
+        0.09007937461137772,
+        0.03332500532269478
+      ],
+      "min": [
+        -0.0350264273583889,
+        0.000016272966604446992,
+        -0.03530215099453926
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4313,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4313,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 23244,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 51756,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 51756,
+      "byteOffset": 51756
+    },
+    {
+      "buffer": 0,
+      "byteLength": 34504,
+      "byteOffset": 103512
+    },
+    {
+      "buffer": 0,
+      "byteLength": 46488,
+      "byteOffset": 138016
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 184504,
+      "uri": "food_kiwi_01.bin"
+    }
+  ]
+}
