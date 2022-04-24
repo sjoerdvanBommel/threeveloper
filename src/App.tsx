@@ -28,19 +28,25 @@ function Terrain() {
     normalMap: "/textures/aerial_rocks_02_nor_gl_4k_edited.jpg",
   });
 
-  const { displacementScale, aoMapIntensity, normalScale } = useControls({
-    displacementScale: {
-      value: 1,
-      min: -2,
-      max: 2,
-    },
-    aoMapIntensity: {
-      value: 1,
-      min: 0,
-      max: 10,
-    },
-    normalScale: [1, 1],
-  });
+  const { displacementScale, aoMapIntensity, normalScale, roughness } =
+    useControls({
+      displacementScale: {
+        value: 1,
+        min: -2,
+        max: 2,
+      },
+      aoMapIntensity: {
+        value: 1,
+        min: 0,
+        max: 10,
+      },
+      normalScale: [1, 1],
+      roughness: {
+        value: 0.1,
+        min: 0,
+        max: 1,
+      },
+    });
 
   const { camera } = useThree();
   useEffect(() => {
@@ -67,6 +73,7 @@ function Terrain() {
     displacementScale,
     aoMapIntensity,
     normalScale: new Vector2(normalScale[0], normalScale[1]),
+    roughness,
   };
 
   const mesh = useRef<Mesh>(null!);
