@@ -1,12 +1,13 @@
 import { Box, OrbitControls, Torus } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
+import { Vector2 } from "three";
 import "./App.css";
 
 function ExampleTorus() {
   return (
-    <Torus args={[2, 0.5, 8, 16]}>
-      <meshBasicMaterial color={"#2fe4fc"} />
+    <Torus args={[2, 0.5, 32, 128]}>
+      <meshNormalMaterial normalScale={new Vector2(1, -1)} />
     </Torus>
   );
 }
