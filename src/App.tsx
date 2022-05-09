@@ -1,14 +1,29 @@
-import { OrbitControls } from "@react-three/drei";
+import { Box, OrbitControls, Torus } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { useControls } from "leva";
 import "./App.css";
 
+function ExampleTorus() {
+  return (
+    <Torus args={[2, 0.5, 8, 16]}>
+      <meshBasicMaterial color={"#2fe4fc"} />
+    </Torus>
+  );
+}
+
 function ThreeScene() {
+  const { color } = useControls("Fog", { color: "#000" });
+
   return (
     <Canvas>
       <ambientLight />
       <pointLight position={[5, 5, 5]} intensity={1} />
       <pointLight position={[-3, -3, 2]} />
       <OrbitControls />
+
+      <fog attach="fog" args={[color, 2, 10]} />
+      <ExampleTorus />
+      <Box position={[0, 0, -1]} />
     </Canvas>
   );
 }
