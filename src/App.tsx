@@ -1,14 +1,17 @@
-import { Box, OrbitControls, Torus, useTexture } from "@react-three/drei";
+import { Box, OrbitControls, Torus } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
 import "./App.css";
 
 function ExampleTorus() {
-  const matcap = useTexture('./matcaps/matcap.png');
+  const { metalness, roughness } = useControls("Torus", {
+    metalness: 0,
+    roughness: 1,
+  });
 
   return (
     <Torus args={[2, 0.5, 32, 128]}>
-      <meshMatcapMaterial matcap={matcap} />
+      <meshStandardMaterial metalness={metalness} roughness={roughness} />
     </Torus>
   );
 }
@@ -19,7 +22,7 @@ function ThreeScene() {
   return (
     <Canvas>
       <ambientLight />
-      <pointLight position={[5, 5, 5]} intensity={1} />
+      <pointLight position={[5, 5, 5]} intensity={4} />
       <pointLight position={[-3, -3, 2]} />
       <OrbitControls />
 
