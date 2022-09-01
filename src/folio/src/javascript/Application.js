@@ -91,7 +91,7 @@ export default class Application
         this.renderer.setPixelRatio(2)
         this.renderer.setSize(this.sizes.viewport.width, this.sizes.viewport.height)
         this.renderer.physicallyCorrectLights = true
-        this.renderer.gammaFactor = 2.2
+        // this.renderer.gammaFactor = 2.2
         this.renderer.gammaOutPut = true
         this.renderer.autoClear = false
 

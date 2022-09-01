@@ -1,16 +1,16 @@
 # Threeveloper
 
-## 1. Introduction
+## 2. Setting up Prettier & ESLint
 
 ![Portfolio](./portfolio.png)
 
 Hey everyone! 👋
 
-This branch contains the result code from the [introduction video](https://www.youtube.com/watch?v=xXnRi0_b-zg) about converting [Bruno Simon's portfolio project](https://bruno-simon.com/) from three.js to react three fiber.
+This branch contains the code of [video #2](https://www.youtube.com/watch?v=-VOjhWcP3W0) of this course where we are converting [Bruno Simon's portfolio project](https://bruno-simon.com/) from three.js to react three fiber.
 
 You can use this project as a reference if you get stuck somewhere or if you want to check which exact dependency versions are being used in the videos.
 
-Bruno Simon's portfolio might be updated over time as well, so feel free to download the version downloaded in the video by copying the `src/folio` folder.
+Bruno Simon's portfolio might be updated over time as well, so feel free to download the version downloaded in the video by copying the `src/folio` folder. Please note that the files inside of that folder might be edited slightly in the videos to keep things working. The unedited version can be found [here](https://github.com/sjoerdvanBommel/threeveloper/tree/011-bruno-simon-portfolio-introduction/src/folio).
 
 If you're not familiar with three.js yet, definitely check out [my other videos](https://www.youtube.com/channel/UC74yl2lsr6zF9RENwXrEkpw/) and Bruno Simon's [three.js journey](https://threejs-journey.com/) course.
 
