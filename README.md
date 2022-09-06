@@ -1,12 +1,12 @@
 # Threeveloper
 
-## 2. Setting up Prettier & ESLint
+## 3. The Canvas Component
 
 ![Portfolio](./portfolio.png)
 
 Hey everyone! 👋
 
-This branch contains the code of [video #2](https://www.youtube.com/watch?v=-VOjhWcP3W0) of this course where we are converting [Bruno Simon's portfolio project](https://bruno-simon.com/) from three.js to react three fiber.
+This branch contains the code of [video #3](https://www.youtube.com/watch?v=_rvW_EyKJQY) of this course where we are converting [Bruno Simon's portfolio project](https://bruno-simon.com/) from three.js to react three fiber.
 
 You can use this project as a reference if you get stuck somewhere or if you want to check which exact dependency versions are being used in the videos.
 
