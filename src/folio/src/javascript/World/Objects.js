@@ -102,7 +102,7 @@ export default class Objects {
                         _options.floorShadowTexture;
                     material.uniforms.uShadowColor.value = new THREE.Color(
                         this.materials.items.floorShadow.shadowColor
-                    );
+                    ).convertLinearToSRGB();
                     material.uniforms.uAlpha.value = 0;
 
                     const mesh = new THREE.Mesh(geometry, material);

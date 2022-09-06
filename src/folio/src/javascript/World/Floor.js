@@ -24,10 +24,10 @@ export default class Floor {
         this.material = new FloorMaterial();
 
         this.updateMaterial = () => {
-            const topLeft = new THREE.Color(this.colors.topLeft);
-            const topRight = new THREE.Color(this.colors.topRight);
-            const bottomRight = new THREE.Color(this.colors.bottomRight);
-            const bottomLeft = new THREE.Color(this.colors.bottomLeft);
+            const topLeft = new THREE.Color(this.colors.topLeft).convertLinearToSRGB();
+            const topRight = new THREE.Color(this.colors.topRight).convertLinearToSRGB();
+            const bottomRight = new THREE.Color(this.colors.bottomRight).convertLinearToSRGB();
+            const bottomLeft = new THREE.Color(this.colors.bottomLeft).convertLinearToSRGB();
 
             const data = new Uint8Array([
                 Math.round(bottomLeft.r * 255),
