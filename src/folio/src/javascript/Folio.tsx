@@ -15,6 +15,7 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js'
 import BlurPass from './Passes/Blur.js'
 import GlowsPass from './Passes/Glows.js'
+import WorldComponent from './World/WorldComponent.js'
 
 const Folio = () => {
   useEffect(() => {
@@ -199,7 +200,7 @@ const Folio = () => {
       world: world.current
     });
   }, []);
-  return null;
+  return <WorldComponent />;
 };
 
 export default Folio;

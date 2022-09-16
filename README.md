@@ -1,12 +1,12 @@
 # Threeveloper
 
-## 4. The Canvas Component - Part 2
+## 5. Creating a custom R3F material
 
 ![Portfolio](./portfolio.png)
 
 Hey everyone! 👋
 
-This branch contains the code of [video #4](https://youtu.be/duGht1inRjY) of this course where we are converting [Bruno Simon's portfolio project](https://bruno-simon.com/) from three.js to react three fiber.
+This branch contains the code of [video #5](https://youtu.be/SVQTrhRG78o) of this course where we are converting [Bruno Simon's portfolio project](https://bruno-simon.com/) from three.js to react three fiber.
 
 You can use this project as a reference if you get stuck somewhere or if you want to check which exact dependency versions are being used in the videos.
 
