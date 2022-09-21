@@ -1,12 +1,12 @@
 # Threeveloper
 
-## 5. Creating a custom R3F material
+## 6. Improving the Project Structure
 
 ![Portfolio](./portfolio.png)
 
 Hey everyone! 👋
 
-This branch contains the code of [video #5](https://youtu.be/SVQTrhRG78o) of this course where we are converting [Bruno Simon's portfolio project](https://bruno-simon.com/) from three.js to react three fiber.
+This branch contains the code of [video #6](https://youtu.be/Qa7MSugj8Gw) of this course where we are converting [Bruno Simon's portfolio project](https://bruno-simon.com/) from three.js to react three fiber.
 
 You can use this project as a reference if you get stuck somewhere or if you want to check which exact dependency versions are being used in the videos.
 

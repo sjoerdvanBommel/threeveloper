@@ -18,5 +18,8 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest"
+  },
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off"
   }
 }

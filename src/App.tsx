@@ -1,7 +1,7 @@
 import { Leva } from "leva";
 import "./App.css";
-import FolioCanvas from "./folio/src/javascript/FolioCanvas";
-import "./folio/src/style/main.css";
+import FolioCanvas from "./folio/javascript/FolioCanvas";
+import "./folio/style/main.css";
 
 const isLevaDebug = window.location.hash === "#leva";
 
