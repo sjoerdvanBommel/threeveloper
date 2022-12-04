@@ -1,10 +1,11 @@
 import { Plane } from "@react-three/drei";
 import { useControls } from "leva";
+import { LEVA_FOLDERS } from "../constants";
 
 export default function FloorComponent() {
   const { topLeftColor, topRightColor, bottomLeftColor, bottomRightColor } =
     useControls(
-      "Floor",
+      LEVA_FOLDERS.floor,
       {
         topLeftColor: "#f5883c",
         topRightColor: "#ff9043",

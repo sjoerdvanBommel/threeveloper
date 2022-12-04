@@ -1,5 +1,9 @@
 import { useTexture } from "@react-three/drei";
-import { MeshMatcapMaterial, Texture } from "three";
+import { useControls } from "leva";
+import { useEffect, useMemo } from "react";
+import { Texture } from "three";
+import { LEVA_FOLDERS } from "../../constants";
+import { FolioMatcapMaterial } from "../../Materials/FolioMatcapMaterial";
 import { convertObject } from "../../Utils/convertObject";
 
 const matcapMaterialColors = [
@@ -30,14 +34,38 @@ type MatcapTextures = {
 };
 
 export type FolioMatcapMaterials = {
-  [key in MatcapMaterialColor]: MeshMatcapMaterial;
+  [key in MatcapMaterialColor]: FolioMatcapMaterial;
 };
 
 export function useFolioMatcapMaterials(): FolioMatcapMaterials {
   const matcapTextures = useTexture(useTextureParam) as MatcapTextures;
-
-  return convertObject(
-    matcapTextures,
-    (texture) => new MeshMatcapMaterial({ matcap: texture })
+  const folioMatcapMaterials = useMemo(
+    () =>
+      convertObject(
+        matcapTextures,
+        (texture) => new FolioMatcapMaterial(texture)
+      ),
+    [matcapTextures]
   );
+
+  const { revealProgress } = useControls(
+    LEVA_FOLDERS.materials,
+    {
+      revealProgress: {
+        value: 0,
+        min: 0,
+        max: 1,
+        label: "Reveal progress",
+      },
+    },
+    { collapsed: true, color: "#d11f00" }
+  );
+
+  useEffect(() => {
+    Object.values(folioMatcapMaterials).forEach((material) => {
+      material.uRevealProgress = revealProgress;
+    });
+  }, [revealProgress]);
+
+  return folioMatcapMaterials;
 }

@@ -1,3 +1,4 @@
+import { useControls } from "leva";
 import { MeshNormalMaterial, Texture } from "three";
 import {
   BasicMaterialColor,
@@ -9,7 +10,8 @@ import {
   MatcapMaterialColor,
   useFolioMatcapMaterials,
 } from "./useFolioMatcapMaterials";
-import { useGetFolioFloorShadowMaterial } from "./useGetFolioFloorShadowMaterial";
+import { DEFAULT_SHADOW_COLOR, LEVA_FOLDERS } from "../../constants";
+import { FloorShadowMaterial } from "../../Materials/FloorShadowMaterial";
 
 export interface FolioMaterials {
   matcaps: FolioMatcapMaterials;
@@ -19,8 +21,11 @@ export interface FolioMaterials {
 export function useGetMaterial() {
   const folioMatcapMaterials = useFolioMatcapMaterials();
   const folioBasicMaterials = useFolioBasicMaterials();
-  const getFolioFloorShadowMaterial = useGetFolioFloorShadowMaterial();
-  console.log("rerendered");
+
+  // TODO: don't reset reveal progress on color change
+  const { color } = useControls(LEVA_FOLDERS.materials, {
+    color: { value: DEFAULT_SHADOW_COLOR, label: "Shadow color" },
+  });
 
   function getMaterial(meshName: string, floorShadowTexture?: Texture) {
     const matcapColor = getMatcapColor(meshName);
@@ -34,7 +39,7 @@ export function useGetMaterial() {
     }
 
     if (isFloor(meshName) && floorShadowTexture) {
-      return getFolioFloorShadowMaterial(floorShadowTexture);
+      return new FloorShadowMaterial(floorShadowTexture, color);
     }
 
     return new MeshNormalMaterial();
