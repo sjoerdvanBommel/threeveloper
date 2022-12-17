@@ -21,7 +21,7 @@ export default class IntroSection
         this.container.matrixAutoUpdate = false
         this.container.updateMatrix()
 
-        this.setStatic()
+        // this.setStatic()
         this.setInstructions()
         this.setOtherInstructions()
         this.setTitles()
