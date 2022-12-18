@@ -1,17 +1,23 @@
 import { Plane } from "@react-three/drei";
-import { useControls } from "leva";
+import { folder, useControls } from "leva";
+import { LEVA_FOLDERS } from "../constants";
 
 export default function FloorComponent() {
   const { topLeftColor, topRightColor, bottomLeftColor, bottomRightColor } =
     useControls(
-      "Floor",
+      LEVA_FOLDERS.materials.label,
       {
-        topLeftColor: "#f5883c",
-        topRightColor: "#ff9043",
-        bottomLeftColor: "#fccf92",
-        bottomRightColor: "#f5aa58",
+        [LEVA_FOLDERS.floor.label]: folder(
+          {
+            topLeftColor: { value: "#f5883c", label: "Top left color" },
+            topRightColor: { value: "#ff9043", label: "Top right color" },
+            bottomLeftColor: { value: "#fccf92", label: "Bottom left color" },
+            bottomRightColor: { value: "#f5aa58", label: "Bottom right color" },
+          },
+          { collapsed: true, color: LEVA_FOLDERS.floor.color }
+        ),
       },
-      { collapsed: true, color: "#f58e11" }
+      { collapsed: true, color: LEVA_FOLDERS.materials.color }
     );
 
   return (
