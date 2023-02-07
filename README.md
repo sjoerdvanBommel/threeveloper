@@ -25,7 +25,7 @@ The source code for each course video is seperated into it's own branch. The lin
 Once you downloaded the project, you only have to run two commands:
 
 ```
-npm run install
+npm install
 ```
 
 ```
