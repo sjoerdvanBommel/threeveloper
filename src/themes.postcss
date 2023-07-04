@@ -1,0 +1,34 @@
+.light-theme * {
+	--gallery-black: #000000;
+	--gallery-white: #ffffff;
+	--bg-from: theme('colors.neutral.100');
+	--bg-to: theme('colors.neutral.400');
+	--title-from: theme('colors.gray.700');
+	--title-to: theme('colors.gray.900');
+}
+
+.dark-theme * {
+	--gallery-black: #ffffff;
+	--gallery-white: #000000;
+	--bg-from: theme('colors.neutral.800');
+	--bg-to: theme('colors.neutral.950');
+	--title-from: theme('colors.neutral.100');
+	--title-to: theme('colors.neutral.400');
+}
+
+.light-theme #background,
+.dark-theme #background {
+	transition: --bg-from 300ms, --bg-to 300ms !important;
+}
+
+@property --bg-from {
+	syntax: '<color>';
+	initial-value: theme('colors.neutral.800');
+	inherits: false;
+}
+
+@property --bg-to {
+	syntax: '<color>';
+	initial-value: theme('colors.neutral.950');
+	inherits: false;
+}

@@ -1,0 +1,39 @@
+@import 'themes.postcss';
+
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'Archivo Black';
+	src: url('/fonts/ArchivoBlack-Regular.ttf');
+}
+
+@layer base {
+	html,
+	body {
+		@apply w-full h-full text-black m-0 p-0 min-w-fit min-h-screen;
+	}
+
+	* {
+		@apply transition-colors ease-in-out;
+	}
+
+	h1 {
+		@apply text-2xl md:text-3xl lg:text-5xl xl:text-7xl;
+	}
+
+	h2 {
+		@apply text-xl;
+	}
+
+	h3 {
+		@apply text-lg;
+	}
+}
