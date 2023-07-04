@@ -5,6 +5,6 @@
 	export let data: PageData;
 </script>
 
-<main class="w-full mt-8">
+<main class="w-full grow mt-8 flex flex-col">
 	<Gallery photos={data.photos} />
 </main>

@@ -2,8 +2,12 @@ import { error } from '@sveltejs/kit';
 import { unsplash } from '../services/unsplash';
 
 export async function load({ url }) {
+	const query = url.searchParams.get('query');
+
+	if (!query?.length) return { photos: [] };
+
 	const result = await unsplash.search.getPhotos({
-		query: url.searchParams.get('query') ?? '',
+		query,
 		perPage: 25
 	});
 
