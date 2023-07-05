@@ -10,7 +10,6 @@
 	export let photos: PageData['photos'];
 	let value = $page.url.searchParams.get('query');
 	let loading = false;
-	let queryInput: HTMLInputElement;
 
 	$: if (value !== $page.url.searchParams.get('query')) {
 		photos = [];

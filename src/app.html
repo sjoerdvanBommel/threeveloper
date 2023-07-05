@@ -6,7 +6,8 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover" class="overflow-y-scroll">
+	<!-- TODO: remove overflow-y-scroll once content is big enough -->
+	<body data-sveltekit-preload-data="hover" class="overflow-y-scroll overflow-x-hidden">
 		<div class="contents">%sveltekit.body%</div>
 	</body>
 </html>

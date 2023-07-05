@@ -8,7 +8,7 @@ export async function load({ url }) {
 
 	const result = await unsplash.search.getPhotos({
 		query,
-		perPage: 25
+		perPage: 30
 	});
 
 	if (result.type === 'error') throw error(500, 'Internal server error');
