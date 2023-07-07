@@ -9,7 +9,7 @@
 	import type { PageData } from '../../routes/$types';
 	import { infiniteScroll } from '../../utils/actions/infinite-scroll';
 	import debounce from '../../utils/directives/debounce';
-	import DiamondSpinner from '../diamond-spinner.svelte';
+	import DiamondSpinner from '../spinners/diamond-spinner.svelte';
 	import GalleryItem from './gallery-item.svelte';
 
 	export let photos: PageData['photos'];

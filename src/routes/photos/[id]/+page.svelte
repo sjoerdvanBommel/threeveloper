@@ -47,24 +47,20 @@
 			<BackIcon onSelect={() => history.back()} />
 		</div>
 		<div class="flex items-center flex-col md:flex-row">
-			<a
-				class="mb-2 md:mb-0 mr-4 shrink-0"
-				target="_blank"
-				href="https://unsplash.com/?utm_source=Gallery%20App&utm_medium=referral"
-				><img
-					src={photo.user.profile_image.medium}
-					alt="User profile"
-					class="h-16 w-16 rounded-full"
-				/></a
-			>
+			<img
+				src={photo.user.profile_image.medium}
+				alt="User profile"
+				class="h-16 w-16 rounded-full mb-2 md:mb-0 mr-4 shrink-0"
+			/>
 			<div class="flex flex-col select-text text-center md:text-start">
 				<span class="text-3xl md:text-5xl mb-2">{photo.alt_description ?? photo.description}</span>
 				<span class="text-lg md:text-xl"
 					>Photo by
-					{#if photo.user.portfolio_url}
+					{#if photo.user.portfolio_url || photo.links.html}
 						<a
 							target="_blank"
-							href={`https://unsplash.com/@${photo.user.username}?utm_source=Gallery%20App&utm_medium=referral`}
+							href={photo.user.portfolio_url ??
+								`${photo.links.html}?utm_source=Gallery%20App&utm_medium=referral`}
 							class="underline cursor-pointer">{photo.user.name}</a
 						>
 					{:else}

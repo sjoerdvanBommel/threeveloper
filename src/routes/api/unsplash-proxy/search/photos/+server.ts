@@ -1,12 +1,19 @@
+import { MOCKED_API } from '$env/static/private';
 import { error, json } from '@sveltejs/kit';
 import type { Photo } from '../../../../../components/gallery/types';
 import { unsplash } from '../../../../../services/unsplash/unsplash';
+import type { RequestHandler } from './$types';
+import { mockPhotos } from './mock-photos';
 
 export interface SearchPhotosType {
 	photos: Photo[];
 }
 
-export async function GET({ url }) {
+export const GET: RequestHandler = async ({ url }) => {
+	if (MOCKED_API === 'true') {
+		return json({ photos: mockPhotos });
+	}
+
 	const query = url.searchParams.get('query');
 	const page = +(url.searchParams.get('page') ?? 1);
 
@@ -34,4 +41,4 @@ export async function GET({ url }) {
 	);
 
 	return json({ photos });
-}
+};

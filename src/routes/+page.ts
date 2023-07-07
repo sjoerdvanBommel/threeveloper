@@ -1,7 +1,7 @@
+import type { Load } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
 
-// TODO: Can I make this a page.ts file?
-export async function load({ fetch, url }) {
+export const load: Load = async ({ fetch, url }) => {
 	const query = url.searchParams.get('query');
 
 	if (!query?.length) return { photos: [] };
@@ -17,4 +17,4 @@ export async function load({ fetch, url }) {
 	return {
 		photos
 	};
-}
+};
