@@ -1,30 +1,20 @@
 import { error } from '@sveltejs/kit';
-import { unsplash } from '../services/unsplash';
 
-export async function load({ url }) {
+// TODO: Can I make this a page.ts file?
+export async function load({ fetch, url }) {
 	const query = url.searchParams.get('query');
 
 	if (!query?.length) return { photos: [] };
 
-	const result = await unsplash.search.getPhotos({
-		query,
-		perPage: 30
-	});
+	const getResponse = await fetch(`api/unsplash-proxy/search/photos?query=${query}&page=1`);
 
-	if (result.type === 'error') throw error(500, 'Internal server error');
+	if (getResponse.status !== 200) {
+		throw error(getResponse.status, 'Failed to fetch data from GET endpoint');
+	}
+
+	const { photos } = await getResponse.json();
 
 	return {
-		photos: result.response.results.map(
-			({ id, description, alt_description, urls, likes, user: { name }, width, height }) => ({
-				id,
-				description,
-				alt_description,
-				urls,
-				likes,
-				name,
-				width,
-				height
-			})
-		)
+		photos
 	};
 }

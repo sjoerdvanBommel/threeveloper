@@ -8,13 +8,13 @@
 	export let data: PageData;
 </script>
 
-<header class="flex justify-between h-24 w-full py-2 px-6" transition:fade>
+<header class="flex justify-between h-28 md:h-32 lg:h-36 xl:h-40 w-full py-4 px-6" transition:fade>
 	<img
 		src={`/images/threeveloper logo transparent${$theme === Themes.Dark ? ' light' : ''}.png`}
 		alt="Threeveloper logo"
 	/>
 	<h1
-		class="bg-clip-text font-headings text-center bg-gradient-to-r from-title-primary to-title-secondary text-transparent break-all h-fit self-center"
+		class="bg-clip-text font-headings text-center bg-gradient-to-r from-title-primary to-title-secondary text-transparent break-all h-full flex items-center"
 	>
 		Gallery App
 	</h1>

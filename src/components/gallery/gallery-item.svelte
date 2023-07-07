@@ -17,7 +17,7 @@
 	<a
 		href={`/photos/${photo.id}`}
 		data-sveltekit-noscroll
-		class="block shadow-inset hover:shadow-inner group transition-shadow rounded overflow-hidden"
+		class="block shadow-inset hover:shadow-inner focus:shadow-inner group transition-shadow rounded overflow-hidden"
 	>
 		<img
 			loading="lazy"
@@ -26,7 +26,7 @@
 			src={photo.urls[!loaded ? 'thumb' : 'small']}
 			on:load={() => (loaded = true)}
 			alt="Temp alt"
-			class="group-hover:scale-105 scale-100 transition-transform ease-in-out min-w-full relative -z-10"
+			class="group-hover:scale-105 scale-100 group-focus:scale-105 transition-transform ease-in-out min-w-full relative -z-10"
 		/>
 	</a>
 </div>

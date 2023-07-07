@@ -3,7 +3,7 @@
 	import { theme } from '../stores/theme';
 </script>
 
-<div class={`${$theme}-theme h-full flex flex-col`}>
+<div class={`${$theme}-theme h-full flex flex-col text-black`}>
 	<div
 		id="background"
 		class="w-full h-full bg-gradient-to-br from-bg-primary to-bg-secondary fixed inset-0 -z-10"

@@ -11,8 +11,8 @@ const config = {
 				headings: ['Archivo Black', 'Quicksand', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
-				black: 'var(--gallery-black)',
-				white: 'var(--gallery-white)',
+				black: 'rgb(var(--gallery-black) / <alpha-value>)',
+				white: 'rgb(var(--gallery-white) / <alpha-value>)',
 				bg: {
 					primary: 'var(--bg-from)',
 					secondary: 'var(--bg-to)'
@@ -25,9 +25,10 @@ const config = {
 			gridTemplateColumns: {
 				20: 'repeat(20, minmax(0, 1fr))'
 			},
-			boxShadow: {
-				inset: 'inset 0 0 18px -6px #000000'
-			}
+			boxShadow: (theme) => ({
+				inset: 'inset 0 0 18px -6px #000000',
+				'light-bottom': `inset 150px -200px 150px ${theme('colors.white')}`
+			})
 		},
 		transitionDuration: {
 			DEFAULT: '300ms'

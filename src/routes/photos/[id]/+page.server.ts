@@ -1,14 +1,13 @@
 import { error } from '@sveltejs/kit';
-import { unsplash } from '../../../services/unsplash';
+import { unsplash } from '../../../services/unsplash/unsplash';
+import type { PageServerLoad } from './$types';
 
-export async function load({ params }) {
+export const load: PageServerLoad = async ({ params }) => {
 	const { id } = params;
 
-	const result = await unsplash.photos.get({ photoId: id });
+	const { response: photo, type } = await unsplash.photos.get({ photoId: id });
 
-	if (result.type === 'error') throw error(500, 'Internal server error');
+	if (type === 'error') throw error(500, 'Internal server error');
 
-	return {
-		photo: result.response
-	};
-}
+	return { photo };
+};
