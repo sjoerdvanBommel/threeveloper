@@ -2,25 +2,26 @@
 
 Welcome to the Gallery App made by Threeveloper! This project is a gallery web application built with SvelteKit. It allows users to search for images and fetches them from the Unsplash API. The primary purpose of this project is to rebuilt it during the "Mastering SvelteKit: Elevate Your Web Projects".
 
-I believe that, at the end of this tutorial series, you **don't want to go back to React or Angular anymore**. Go [check it out](https://TODO:)!
+I believe that, at the end of this tutorial series, you **don't want to go back to React or Angular anymore**.
+
+Go [check it out](https://TODO:)!
 
 ### Demo
 
-Check out these short video about what you will build during this tutorial series!
+Check out these short videos about what you will build during this tutorial series!
 
 It also supports:
 
 - 🌓 dark mode
 - 📱 Responsive design
-- 😴 Lazy ánd progressive image loading
+- 😴 Lazy ánd progressive image loading for optimized performance
 
-<br>
+Also check out the live demo of the Gallery App at [https://threeveloper.vercel.app](https://threeveloper-git-sveltekit-tutorial-fina-de2b95-sjoerdvanbommel.vercel.app/).
 
-[![Video Walkthrough](./static/images/readme/app%20thumbnail.png)](./static/videos/readme/preview.mp4)
-
-[![Mobile and dark mode support](./static/images/readme/mobile%20thumbnail.png)](./static/videos/readme/mobile.mp4)
-
-Check out the live demo of the Gallery App at [https://threeveloper.vercel.app](https://threeveloper-git-sveltekit-tutorial-fina-de2b95-sjoerdvanbommel.vercel.app/).
+<div>
+  <img src="static/videos/readme/preview.gif" alt="Gallery App Preview" width="600px">
+  <img src="static/videos/readme/mobile.gif" alt="Mobile and dark mode support" width="200px">
+</div>
 
 ## 🚀 Getting Started
 
@@ -34,7 +35,7 @@ Clone the branch `sveltekit-tutorial-final-result` of my `threeveloper` reposito
 git clone -b sveltekit-tutorial-final-result https://github.com/sjoerdvanBommel/threeveloper.git gallery-app
 ```
 
-### Install the dependencies 📦
+### 2. Install the dependencies 📦
 
 Open the folder in which you cloned the repository and install the dependencies:
 
@@ -43,7 +44,7 @@ cd gallery-app
 npm install
 ```
 
-### Configure the API credentials 🔑
+### 3. Configure the API credentials 🔑
 
 - [Create an account on Unsplash](https://unsplash.com/join), register a new application and obtain an API key for that application.
   > **Note**
@@ -51,7 +52,7 @@ npm install
 - Copy the `.env.example` file and rename it to `.env.local`.
 - Replace the UNSPLASH_ACCESS_KEY and UNSPLASH_SECRET_KEY placeholders in the `.env.local` file with your actual API keys.
 
-### Start the development server ▶️
+### 4. Start the development server ▶️
 
 Run the development server:
 
@@ -80,8 +81,7 @@ npm run build
 
 The project follows a folder structure that separates different concerns for better organization and maintainability:
 
-- 📁 `src/routes`: Contains the routes used by the application.
-- 📁 `src/routes/api`: Houses the API routes for fetching data from external sources (Unsplash in this case).
+- 📁 `src/routes`: Contains the routes used by the application. API routes are in the `src/routes/api` directory.
 - 📁 `src/components`: Contains all re-usable UI components which are used in multiple routes or other components.
 - 📁 `src/clients`: Manages the API calls to the backend (or, in some cases, external services).
 - 📁 `src/services`: Contains reusable functions and logic used in the backend.
