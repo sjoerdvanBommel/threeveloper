@@ -1,16 +1,16 @@
-import { MOCKED_API } from '$env/static/private';
+import { MSW_ENABLED } from '$env/static/private';
 import { error, json } from '@sveltejs/kit';
 import type { Photo } from '../../../../../components/gallery/types';
 import { unsplash } from '../../../../../services/unsplash/unsplash';
+import { mockPhotos } from '../../../../../test/mock-data/photos';
 import type { RequestHandler } from './$types';
-import { mockPhotos } from './mock-photos';
 
 export interface SearchPhotosType {
 	photos: Photo[];
 }
 
 export const GET: RequestHandler = async ({ url }) => {
-	if (MOCKED_API === 'true') {
+	if (MSW_ENABLED === 'true') {
 		return json({ photos: mockPhotos });
 	}
 

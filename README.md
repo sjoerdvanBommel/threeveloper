@@ -62,6 +62,20 @@ npm run dev
 
 The application will be accessible at http://localhost:5173. Enjoy coding from here on! Updates to the code will be reflected near real-time.
 
+## 🧪 Testing
+
+1. If this is your first time you are using playwright, make sure you install it locally:
+
+```shell
+npx playwright install
+```
+
+2. Run the tests
+
+```shell
+npm test
+```
+
 ## 🏗️ Building and Deployment
 
 An easy way to deploy your application is using hosting solutions like [Vercel](https://vercel.com/) and [Netlify](https://www.netlify.com/) which both offer free tiers.

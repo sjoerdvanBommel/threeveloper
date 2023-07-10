@@ -37,15 +37,7 @@
 	async function loadMorePhotos() {
 		photosPage++;
 
-		photos = [
-			...photos,
-			...(
-				await getPhotos({
-					query: value ?? '',
-					page: photosPage
-				})
-			).photos
-		];
+		photos = [...photos, ...(await getPhotos(value ?? undefined, photosPage)).photos];
 	}
 
 	afterNavigate(async () => {

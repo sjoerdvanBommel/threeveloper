@@ -1,11 +1,11 @@
-import { MOCKED_API } from '$env/static/private';
+import { MSW_ENABLED } from '$env/static/private';
 import { error } from '@sveltejs/kit';
 import { unsplash } from '../../../services/unsplash/unsplash';
-import { mockPhotoWithDetails } from '../../api/unsplash-proxy/search/photos/mock-photos';
+import { mockPhotoWithDetails } from '../../../test/mock-data/photo-with-details';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }) => {
-	if (MOCKED_API === 'true') {
+	if (MSW_ENABLED === 'true') {
 		return { photo: mockPhotoWithDetails };
 	}
 

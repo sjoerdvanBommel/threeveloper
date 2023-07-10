@@ -1,3 +1,3 @@
-import { browser } from '$app/environment';
+import { PUBLIC_API_BASE_URL } from '$env/static/public';
 
-export const baseUrl = browser ? `${window.location.origin}/api/unsplash-proxy` : '';
+export const baseUrl = `${PUBLIC_API_BASE_URL}/unsplash-proxy`;
