@@ -72,7 +72,7 @@
 	<div class="w-full grow flex justify-center items-center">
 		<DiamondSpinner size={100} />
 	</div>
-{:else if $page.url.searchParams.get('query')?.length === 0}
+{:else if !photos.length}
 	<span class="text-2xl text-center inline-block w-full">Search to get a list of photos</span>
 {:else}
 	<div class="gallery" use:infiniteScroll={loadMorePhotos}>

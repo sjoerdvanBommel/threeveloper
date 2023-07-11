@@ -41,16 +41,18 @@ vi.mock('$app/environment', (): typeof EnvironmentType => ({
 }));
 
 // Mock SvelteKit runtime module $app/navigation
-vi.mock('$app/navigation', (): typeof NavigationType => ({
+export const navigationParams: typeof NavigationType = {
 	afterNavigate: () => {},
 	beforeNavigate: () => {},
 	disableScrollHandling: () => {},
-	goto: () => Promise.resolve(),
+	goto: vi.fn(),
 	invalidate: () => Promise.resolve(),
 	invalidateAll: () => Promise.resolve(),
 	preloadData: () => Promise.resolve(),
 	preloadCode: () => Promise.resolve()
-}));
+};
+
+vi.mock('$app/navigation', () => navigationParams);
 
 // Mock SvelteKit runtime module $app/stores
 vi.mock('$app/stores', (): typeof StoresType => {

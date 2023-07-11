@@ -16,7 +16,8 @@ export default function debounceDirective(node: HTMLElement, delay = 500): Actio
 	}
 
 	const debouncedFunction = debounce((event: Event) => {
-		node.dispatchEvent(new CustomEvent('debounced', { detail: event }));
+		const customEvent = new CustomEvent('debounced', { detail: event });
+		node.dispatchEvent(customEvent);
 	}, delay);
 
 	node.addEventListener('input', debouncedFunction);

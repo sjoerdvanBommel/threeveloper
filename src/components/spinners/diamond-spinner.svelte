@@ -15,6 +15,7 @@
 </script>
 
 <span
+	title="Loading"
 	style="--size: {size}{unit}; --color:{color}; --duration: {duration};"
 	class:pause-animation={pause}
 >
