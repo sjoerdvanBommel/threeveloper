@@ -1,6 +1,7 @@
 import { MSW_ENABLED } from '$env/static/private';
 import { error, json } from '@sveltejs/kit';
 import type { Photo } from '../../../../../components/gallery/types';
+import { photosPerPage } from '../../../../../services/unsplash/constants';
 import { unsplash } from '../../../../../services/unsplash/unsplash';
 import { mockPhotos } from '../../../../../test/mock-data/photos';
 import type { RequestHandler } from './$types';
@@ -21,7 +22,7 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	const result = await unsplash.search.getPhotos({
 		query,
-		perPage: 30,
+		perPage: photosPerPage,
 		page
 	});
 

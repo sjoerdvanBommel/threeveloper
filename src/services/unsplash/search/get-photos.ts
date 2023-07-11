@@ -1,10 +1,11 @@
 import { error } from '@sveltejs/kit';
+import { photosPerPage } from '../constants';
 import { unsplash } from '../unsplash';
 
 export async function getPhotos(query: string, page?: number) {
 	const result = await unsplash.search.getPhotos({
 		query,
-		perPage: 30,
+		perPage: photosPerPage,
 		page
 	});
 

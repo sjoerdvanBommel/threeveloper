@@ -17,7 +17,7 @@ describe('getPhotos', () => {
 		expect(photos[0].id).toEqual('N04FIfHhv_k');
 	});
 
-	it('filters photos by query', async () => {
+	it('filters photos by page', async () => {
 		const { photos } = await getPhotos(undefined, 2);
 
 		expect(photos.length).toEqual(1);
