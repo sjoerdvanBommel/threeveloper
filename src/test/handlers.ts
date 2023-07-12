@@ -9,7 +9,7 @@ export const handlers = [
 		const page = +req.url.searchParams.get('page')!;
 
 		const photos = mockPhotos
-			.filter((x) => x.alt_description.includes(query) || x.description?.includes(query))
+			.filter((x) => x.alt_description?.includes(query) || x.description?.includes(query))
 			.splice((page - 1) * photosPerPage, page * photosPerPage);
 
 		return res(ctx.status(200), ctx.json({ photos }));

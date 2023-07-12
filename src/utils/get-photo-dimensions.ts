@@ -1,4 +1,4 @@
-import type { Photo } from '../components/gallery/types';
+import type { Photo } from './types';
 
 export const getPhotoVariantDimensions = (photo: Photo, size: keyof Photo['urls'] = 'small') => {
 	const { width: originalWidth, height: originalHeight } = photo;

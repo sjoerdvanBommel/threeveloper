@@ -1,7 +1,9 @@
-export const mockPhotos = [
+import type { Photo } from '../../utils/types';
+
+export const mockPhotos: Photo[] = [
 	{
 		id: 'NqkTxxK_2ZY',
-		description: null,
+		description: undefined,
 		alt_description: 'a man holding a small dog in his hands',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1687360440731-d124aea41a3e?ixid=M3w0NzAwNTZ8MXwxfHNlYXJjaHwxfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3',
@@ -11,9 +13,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1687360440731-d124aea41a3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MXwxfHNlYXJjaHwxfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1687360440731-d124aea41a3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MXwxfHNlYXJjaHwxfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1687360440731-d124aea41a3e'
+				'https://images.unsplash.com/photo-1687360440731-d124aea41a3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MXwxfHNlYXJjaHwxfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 7,
 		name: 'Hiki App',
@@ -32,9 +32,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1517849845537-4d257902454a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1517849845537-4d257902454a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1517849845537-4d257902454a'
+				'https://images.unsplash.com/photo-1517849845537-4d257902454a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 3065,
 		name: 'charlesdeluvio',
@@ -53,9 +51,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1561037404-61cd46aa615b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1561037404-61cd46aa615b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1561037404-61cd46aa615b'
+				'https://images.unsplash.com/photo-1561037404-61cd46aa615b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzfHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 1307,
 		name: 'Victor Grabarczyk',
@@ -74,9 +70,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1552053831-71594a27632d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw0fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1552053831-71594a27632d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw0fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1552053831-71594a27632d'
+				'https://images.unsplash.com/photo-1552053831-71594a27632d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw0fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 2066,
 		name: 'Richard Brutyo',
@@ -85,7 +79,7 @@ export const mockPhotos = [
 	},
 	{
 		id: '2l0CWTpcChI',
-		description: null,
+		description: undefined,
 		alt_description: "dog's face",
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw1fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3',
@@ -95,9 +89,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1543466835-00a7907e9de1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw1fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1543466835-00a7907e9de1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw1fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1543466835-00a7907e9de1'
+				'https://images.unsplash.com/photo-1543466835-00a7907e9de1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw1fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 706,
 		name: 'Milli',
@@ -106,7 +98,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'U3aF7hgUSrk',
-		description: null,
+		description: undefined,
 		alt_description: 'white and brown long coat large dog',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw2fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3',
@@ -116,9 +108,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1587300003388-59208cc962cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw2fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1587300003388-59208cc962cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw2fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1587300003388-59208cc962cb'
+				'https://images.unsplash.com/photo-1587300003388-59208cc962cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw2fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 680,
 		name: 'Pauline Loroy',
@@ -137,9 +127,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw3fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw3fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1586671267731-da2cf3ceeb80'
+				'https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw3fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 653,
 		name: 'Taylor Kopel',
@@ -160,9 +148,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw4fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw4fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1530281700549-e82e7bf110d6'
+				'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw4fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 1738,
 		name: 'Oscar Sutton',
@@ -171,7 +157,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'brFsZ7qszSY',
-		description: null,
+		description: undefined,
 		alt_description: 'short-coated brown and white puppy sitting on floor',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw5fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3',
@@ -181,9 +167,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw5fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw5fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1537151625747-768eb6cf92b2'
+				'https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw5fHxkb2d8ZW58MHx8fHwxNjg4NjU2Mjg3fDA&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 734,
 		name: 'Alvan Nee',
@@ -192,7 +176,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'G8cB8hY3yvU',
-		description: null,
+		description: undefined,
 		alt_description: 'brown and white long coated small dog lying on green grass',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -202,9 +186,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1588943211346-0908a1fb0b01'
+				'https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 673,
 		name: 'Ralu Gal',
@@ -223,9 +205,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1583512603805-3cc6b41f3edb'
+				'https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 980,
 		name: 'Karsten Winegeart',
@@ -244,9 +224,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1583337130417-3346a1be7dee'
+				'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxMnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 1420,
 		name: 'Karsten Winegeart',
@@ -265,9 +243,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxM3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxM3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1576201836106-db1758fd1c97'
+				'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxM3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 327,
 		name: 'Cristian Castillo',
@@ -289,9 +265,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1477884213360-7e9d7dcc1e48'
+				'https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 895,
 		name: 'Justin Veenema',
@@ -310,9 +284,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1596492784531-6e6eb5ea9993'
+				'https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 458,
 		name: 'Peri Stojnic',
@@ -321,7 +293,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'TzjMd7i5WQI',
-		description: null,
+		description: undefined,
 		alt_description: 'long-coated white and brown puppy',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1560807707-8cc77767d783?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -331,9 +303,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1560807707-8cc77767d783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1560807707-8cc77767d783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1560807707-8cc77767d783'
+				'https://images.unsplash.com/photo-1560807707-8cc77767d783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxNnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 1409,
 		name: 'T.R Photography 📸',
@@ -352,9 +322,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxN3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxN3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1583511655857-d19b40a7a54e'
+				'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxN3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 578,
 		name: 'Karsten Winegeart',
@@ -373,9 +341,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1597633425046-08f5110420b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxOHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1597633425046-08f5110420b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxOHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1597633425046-08f5110420b5'
+				'https://images.unsplash.com/photo-1597633425046-08f5110420b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxOHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 271,
 		name: 'fatty corgi',
@@ -395,9 +361,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1510771463146-e89e6e86560e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxOXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1510771463146-e89e6e86560e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxOXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1510771463146-e89e6e86560e'
+				'https://images.unsplash.com/photo-1510771463146-e89e6e86560e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwxOXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 1762,
 		name: 'Celine Sayuri Tagami',
@@ -406,7 +370,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'Ntm4C2lCWxQ',
-		description: null,
+		description: undefined,
 		alt_description: 'long-coated brown dog',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1575859431774-2e57ed632664?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -416,9 +380,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1575859431774-2e57ed632664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1575859431774-2e57ed632664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1575859431774-2e57ed632664'
+				'https://images.unsplash.com/photo-1575859431774-2e57ed632664?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 777,
 		name: 'Brooke Cagle',
@@ -427,7 +389,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'T-0EW-SEbsE',
-		description: null,
+		description: undefined,
 		alt_description: 'two brown and white dogs running dirt road during daytime',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -437,9 +399,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1548199973-03cce0bbc87b'
+				'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 1584,
 		name: 'Alvan Nee',
@@ -459,9 +419,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1529429617124-95b109e86bb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1529429617124-95b109e86bb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1529429617124-95b109e86bb8'
+				'https://images.unsplash.com/photo-1529429617124-95b109e86bb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyMnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 894,
 		name: 'Lui Peng',
@@ -470,7 +428,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'urs_y9NwFcc',
-		description: null,
+		description: undefined,
 		alt_description: 'brown and white dog on grass',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyM3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -480,9 +438,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyM3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyM3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1568393691622-c7ba131d63b4'
+				'https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyM3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 266,
 		name: 'Anna Dudkova',
@@ -491,7 +447,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'UtrE5DcgEyg',
-		description: null,
+		description: undefined,
 		alt_description: 'medium-coated brown dog during daytime',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1544568100-847a948585b9?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -501,9 +457,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1544568100-847a948585b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1544568100-847a948585b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1544568100-847a948585b9'
+				'https://images.unsplash.com/photo-1544568100-847a948585b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 955,
 		name: 'Jamie Street',
@@ -512,7 +466,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 's9Tf1eBDFqw',
-		description: null,
+		description: undefined,
 		alt_description: 'brown short coated dog on gray couch',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1581888227599-779811939961?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -522,9 +476,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1581888227599-779811939961?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1581888227599-779811939961?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1581888227599-779811939961'
+				'https://images.unsplash.com/photo-1581888227599-779811939961?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 565,
 		name: 'Jamie Street',
@@ -543,9 +495,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1541364983171-a8ba01e95cfc'
+				'https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyNnx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 2122,
 		name: 'charlesdeluvio',
@@ -554,7 +504,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'tR6PdtuxF-M',
-		description: null,
+		description: undefined,
 		alt_description: 'selective focus photography of Pembroke Welsh Corgi',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1546491764-67a5b8d5b3ae?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyN3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -564,9 +514,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1546491764-67a5b8d5b3ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyN3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1546491764-67a5b8d5b3ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyN3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1546491764-67a5b8d5b3ae'
+				'https://images.unsplash.com/photo-1546491764-67a5b8d5b3ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyN3x8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 274,
 		name: 'Claudie-Ann Tremblay-cantin',
@@ -575,7 +523,7 @@ export const mockPhotos = [
 	},
 	{
 		id: 'x5oPmHmY3kQ',
-		description: null,
+		description: undefined,
 		alt_description: 'Golden Retriever',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1558788353-f76d92427f16?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyOHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -585,9 +533,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1558788353-f76d92427f16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyOHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1558788353-f76d92427f16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyOHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1558788353-f76d92427f16'
+				'https://images.unsplash.com/photo-1558788353-f76d92427f16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyOHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 635,
 		name: 'Victor Grabarczyk',
@@ -596,7 +542,7 @@ export const mockPhotos = [
 	},
 	{
 		id: '2pbnDRhXc6Q',
-		description: null,
+		description: undefined,
 		alt_description: 'black smooth-coated dog',
 		urls: {
 			raw: 'https://images.unsplash.com/photo-1560525821-d5615ef80c69?ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyOXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3',
@@ -606,9 +552,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1560525821-d5615ef80c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyOXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1560525821-d5615ef80c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyOXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1560525821-d5615ef80c69'
+				'https://images.unsplash.com/photo-1560525821-d5615ef80c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwyOXx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 557,
 		name: 'Victor Grabarczyk',
@@ -627,9 +571,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1534551767192-78b8dd45b51b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1534551767192-78b8dd45b51b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1534551767192-78b8dd45b51b'
+				'https://images.unsplash.com/photo-1534551767192-78b8dd45b51b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzMHx8ZG9nfGVufDB8fHx8MTY4ODY1NjI4N3ww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 1110,
 		name: 'Camylla Battani',
@@ -648,9 +590,7 @@ export const mockPhotos = [
 			small:
 				'https://images.unsplash.com/photo-1534361960057-19889db9621e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzMXx8ZG9nfGVufDB8fHx8MTY4OTAyNDYwNnww&ixlib=rb-4.0.3&q=80&w=400',
 			thumb:
-				'https://images.unsplash.com/photo-1534361960057-19889db9621e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzMXx8ZG9nfGVufDB8fHx8MTY4OTAyNDYwNnww&ixlib=rb-4.0.3&q=80&w=200',
-			small_s3:
-				'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1534361960057-19889db9621e'
+				'https://images.unsplash.com/photo-1534361960057-19889db9621e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHwzMXx8ZG9nfGVufDB8fHx8MTY4OTAyNDYwNnww&ixlib=rb-4.0.3&q=80&w=200'
 		},
 		likes: 2138,
 		name: 'Joe Caione',

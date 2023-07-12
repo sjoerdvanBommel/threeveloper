@@ -70,7 +70,7 @@
 </div>
 {#if loading}
 	<div class="w-full grow flex justify-center items-center">
-		<DiamondSpinner size={100} />
+		<DiamondSpinner />
 	</div>
 {:else if !photos.length}
 	<span class="text-2xl text-center inline-block w-full">Search to get a list of photos</span>

@@ -6,7 +6,7 @@
 <div
 	class="cursor-pointer p-2 hover:-translate-x-[4px] transition-transform inline-block rounded-full bg-white"
 	on:pointerdown={onSelect}
-	on:keydown={(e) => (e.code === 'Enter' || e.code === 'Space') && onSelect()}
+	on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && onSelect()}
 	aria-label="Go back"
 	role="button"
 	tabindex={0}

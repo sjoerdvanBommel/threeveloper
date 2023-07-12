@@ -2,12 +2,12 @@
 	import { fly } from 'svelte/transition';
 	import { isSm, isSmaller } from '../../stores/breakpoints';
 	import { getPhotoVariantDimensions } from '../../utils/get-photo-dimensions';
-	import type { Photo } from './types';
+	import type { Photo } from '../../utils/types';
+	import ProgressiveImage from './progressive-image.svelte';
 
 	export let photo: Photo;
 	export let transitionDelay = 0;
 
-	let loaded = false;
 	let flyParams =
 		$isSmaller || $isSm ? { x: -400 } : { y: 400, duration: 200, delay: transitionDelay };
 
@@ -20,13 +20,12 @@
 		data-sveltekit-noscroll
 		class="block shadow-inset hover:shadow-inner focus:shadow-inner group transition-shadow rounded overflow-hidden"
 	>
-		<img
-			loading="lazy"
+		<ProgressiveImage
 			{width}
 			{height}
-			src={photo.urls[!loaded ? 'thumb' : 'small']}
-			on:load={() => (loaded = true)}
-			alt="Temp alt"
+			lowQualityUrl={photo.urls['thumb']}
+			highQualityUrl={photo.urls['small']}
+			alt={photo.alt_description ?? photo.description ?? `Photo made by ${photo.name}`}
 			class="group-hover:scale-105 scale-100 group-focus:scale-105 transition-transform ease-in-out min-w-full relative -z-10"
 		/>
 	</a>

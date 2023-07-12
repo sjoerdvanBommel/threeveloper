@@ -6,7 +6,9 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover" class="overflow-x-hidden">
-		<div class="contents">%sveltekit.body%</div>
+	<body data-sveltekit-preload-data="hover">
+		<div class="contents">
+			<div id="scroll-root" class="overflow-y-scroll h-screen">%sveltekit.body%</div>
+		</div>
 	</body>
 </html>

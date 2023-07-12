@@ -26,7 +26,7 @@
 		<!-- Switch Container -->
 		<div
 			on:pointerdown={toggleDarkMode}
-			on:keydown={(e) => (e.code === 'Enter' || e.code === 'Space') && toggleDarkMode()}
+			on:keydown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleDarkMode()}
 			aria-label="Dark mode toggle"
 			role="switch"
 			aria-checked={darkMode}

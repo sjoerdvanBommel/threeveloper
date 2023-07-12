@@ -1,5 +1,6 @@
 import type { Load } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
+import type { Photo } from '../utils/types';
 
 export const load: Load = async ({ fetch, url }) => {
 	const query = url.searchParams.get('query');
@@ -12,7 +13,7 @@ export const load: Load = async ({ fetch, url }) => {
 		throw error(getResponse.status, 'Failed to fetch data from GET endpoint');
 	}
 
-	const { photos } = await getResponse.json();
+	const { photos } = (await getResponse.json()) as { photos: Photo[] };
 
 	return {
 		photos

@@ -1,14 +1,10 @@
 import { MSW_ENABLED } from '$env/static/private';
 import { error, json } from '@sveltejs/kit';
-import type { Photo } from '../../../../../components/gallery/types';
 import { photosPerPage } from '../../../../../services/unsplash/constants';
 import { unsplash } from '../../../../../services/unsplash/unsplash';
 import { mockPhotos } from '../../../../../test/mock-data/photos';
+import type { Photo } from '../../../../../utils/types';
 import type { RequestHandler } from './$types';
-
-export interface SearchPhotosType {
-	photos: Photo[];
-}
 
 export const GET: RequestHandler = async ({ url }) => {
 	if (MSW_ENABLED === 'true') {
@@ -28,11 +24,11 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	if (result.type === 'error') throw error(500, 'Internal server error');
 
-	const photos = result.response.results.map(
+	const photos: Photo[] = result.response.results.map(
 		({ id, description, alt_description, urls, likes, user: { name }, width, height }) => ({
 			id,
-			description,
-			alt_description,
+			description: description ?? undefined,
+			alt_description: alt_description ?? undefined,
 			urls,
 			likes,
 			name,

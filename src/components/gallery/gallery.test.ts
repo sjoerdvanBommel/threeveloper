@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { readable } from 'svelte/store';
 import { mockPhotos } from '../../test/mock-data/photos';
 import { navigationParams } from '../../test/setupTests';
+import type { Photo } from '../../utils/types';
 import Gallery from './gallery.svelte';
 
 const defaultPageValues: Page = vi.hoisted(() => ({
@@ -21,9 +22,13 @@ const defaultPageValues: Page = vi.hoisted(() => ({
 vi.mock('$app/stores', () => ({ page: readable(defaultPageValues) }));
 
 describe('Gallery', () => {
-	test('renders input field to search for photos', async () => {
-		const photos = mockPhotos;
+	let photos: Photo[];
 
+	beforeEach(() => {
+		photos = mockPhotos;
+	});
+
+	test('renders input field to search for photos', async () => {
 		render(Gallery, { photos });
 
 		const input = screen.getByRole('textbox');
@@ -31,15 +36,12 @@ describe('Gallery', () => {
 	});
 
 	test('renders photos when passed', async () => {
-		const photos = mockPhotos;
-
 		render(Gallery, { photos });
 
 		expect(screen.getAllByRole('img')).toHaveLength(photos.length);
 	});
 
 	test('renders a loader when input changes', async () => {
-		const photos = mockPhotos;
 		userEvent.setup();
 		render(Gallery, { photos });
 
@@ -51,7 +53,6 @@ describe('Gallery', () => {
 	});
 
 	test('sets search input value if query is passed in URL', () => {
-		const photos = mockPhotos;
 		vi.mock('$app/stores', () => ({
 			page: readable<Page>({
 				...defaultPageValues,

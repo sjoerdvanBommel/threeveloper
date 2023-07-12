@@ -1,24 +1,4 @@
-<script lang="ts">
-	type SpinnerTypes = {
-		size: string | number;
-		color: string;
-		unit: string;
-		duration: string;
-		pause: boolean;
-	};
-
-	export let color: SpinnerTypes['color'] = '#33aaaa';
-	export let unit: SpinnerTypes['unit'] = 'px';
-	export let duration: SpinnerTypes['duration'] = '1.5s';
-	export let size: SpinnerTypes['size'] = '60';
-	export let pause: SpinnerTypes['pause'] = false;
-</script>
-
-<span
-	title="Loading"
-	style="--size: {size}{unit}; --color:{color}; --duration: {duration};"
-	class:pause-animation={pause}
->
+<span title="Loading" style="--size: 100px; --duration: 1.5s; --color: #33aaaa">
 	<div />
 	<div />
 	<div />
@@ -50,9 +30,6 @@
 	}
 	div:nth-child(3) {
 		animation-delay: calc(var(--duration) * 2 / 3 * -3);
-	}
-	.pause-animation div {
-		animation-play-state: paused;
 	}
 
 	@keyframes diamonds {

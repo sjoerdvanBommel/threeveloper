@@ -14,7 +14,8 @@ export function infiniteScroll(node: HTMLElement, callback: () => void): ActionR
 
 	const observer = new IntersectionObserver(handleIntersection, {
 		rootMargin: `-110% 0px 10% 0px`,
-		threshold: 0
+		threshold: 0,
+		root: document.querySelector('#scroll-root')
 	});
 	observer.observe(node);
 

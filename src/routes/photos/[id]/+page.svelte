@@ -1,43 +1,36 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
+	import ProgressiveImage from '../../../components/gallery/progressive-image.svelte';
 	import BackIcon from '../../../components/icons/back-icon.svelte';
 	import { isSm, isSmaller } from '../../../stores/breakpoints';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-
-	let sharpImage: HTMLImageElement;
-
-	onMount(() => {
-		if (sharpImage.complete) {
-			loaded = true;
-		}
-	});
-
-	let loaded = false;
 	const { photo } = data;
+
 	let flyOptions = $isSmaller || $isSm ? { x: 600, duration: 200 } : { y: -1000, duration: 600 };
 </script>
 
 <div class="w-full h-full fixed flex">
-	<img
-		class="w-full h-full object-cover absolute"
-		src={photo.urls[loaded ? 'full' : 'small']}
-		alt={photo.alt_description}
+	<div
+		class="w-full h-full absolute"
 		in:fly={flyOptions}
 		out:fly={{ ...flyOptions, duration: 200 }}
-	/>
+	>
+		<ProgressiveImage
+			class="w-full h-full absolute object-cover"
+			lowQualityUrl={photo.urls.small}
+			highQualityUrl={photo.urls.full}
+			alt={photo.alt_description ?? photo.description ?? `Photo made by ${photo.user.name}`}
+		/>
 
-	<img
-		class="w-full h-full object-contain absolute backdrop-blur-3xl"
-		src={photo.urls[loaded ? 'full' : 'small']}
-		alt={photo.alt_description}
-		bind:this={sharpImage}
-		on:load={() => (loaded = true)}
-		in:fly={flyOptions}
-		out:fly={{ ...flyOptions, duration: 200 }}
-	/>
+		<ProgressiveImage
+			class="w-full h-full object-contain backdrop-blur-3xl"
+			lowQualityUrl={photo.urls.small}
+			highQualityUrl={photo.urls.full}
+			alt={photo.alt_description ?? photo.description ?? `Photo made by ${photo.user.name}`}
+		/>
+	</div>
 
 	<div
 		class="grow flex flex-col justify-between relative p-10 select-none bg-gradient-to-t from-white/70 from-0% to-white/0 to-25%"
