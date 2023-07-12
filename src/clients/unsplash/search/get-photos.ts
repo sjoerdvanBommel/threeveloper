@@ -1,8 +1,8 @@
+import { PUBLIC_API_BASE_URL } from '$env/static/public';
 import type { Photo } from '../../../utils/types';
-import { baseUrl } from '../base-url';
 
 export const getPhotos = async (query = '', page = 1): Promise<{ photos: Photo[] }> => {
-	const url = new URL(`${baseUrl}/search/photos`);
+	const url = new URL(`${PUBLIC_API_BASE_URL}/unsplash-proxy/search/photos`);
 	url.searchParams.set('query', query);
 	url.searchParams.set('page', `${page}`);
 

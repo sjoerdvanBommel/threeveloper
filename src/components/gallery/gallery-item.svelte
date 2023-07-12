@@ -25,7 +25,7 @@
 			{height}
 			lowQualityUrl={photo.urls['thumb']}
 			highQualityUrl={photo.urls['small']}
-			alt={photo.alt_description ?? photo.description ?? `Photo made by ${photo.name}`}
+			alt={photo.alt_description ?? photo.description ?? `Photo made by ${photo.user.name}`}
 			class="group-hover:scale-105 scale-100 group-focus:scale-105 transition-transform ease-in-out min-w-full relative -z-10"
 		/>
 	</a>

@@ -7,15 +7,13 @@ export const load: Load = async ({ fetch, url }) => {
 
 	if (!query?.length) return { photos: [] };
 
-	const getResponse = await fetch(`api/unsplash-proxy/search/photos?query=${query}&page=1`);
+	const response = await fetch(`api/unsplash-proxy/search/photos?query=${query}&page=1`);
 
-	if (getResponse.status !== 200) {
-		throw error(getResponse.status, 'Failed to fetch data from GET endpoint');
+	if (response.status !== 200) {
+		throw error(response.status, 'Failed to fetch data from GET endpoint');
 	}
 
-	const { photos } = (await getResponse.json()) as { photos: Photo[] };
+	const { photos } = (await response.json()) as { photos: Photo[] };
 
-	return {
-		photos
-	};
+	return { photos };
 };

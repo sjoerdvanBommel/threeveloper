@@ -20,8 +20,8 @@ describe('getPhotos', () => {
 	it('filters photos by page', async () => {
 		const { photos } = await getPhotos(undefined, 2);
 
-		expect(photos.length).toEqual(1);
-		expect(photos[0].id).toEqual('qO-PIF84Vxg');
+		expect(photos.length).toEqual(25);
+		expect(photos[0].id).toEqual('WLGx0fKFSeI');
 	});
 
 	it('Does not return any photos if page is too big', async () => {

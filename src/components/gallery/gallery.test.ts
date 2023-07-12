@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
 import { readable } from 'svelte/store';
 import { mockPhotos } from '../../test/mock-data/photos';
-import { navigationParams } from '../../test/setupTests';
+import { navigationParams } from '../../test/msw/setupTests';
 import type { Photo } from '../../utils/types';
 import Gallery from './gallery.svelte';
 

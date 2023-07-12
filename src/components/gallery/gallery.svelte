@@ -3,7 +3,7 @@
 	import { afterNavigate, goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import type Masonry from 'masonry-layout';
-	import { onDestroy } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { getPhotos } from '../../clients/unsplash/search/get-photos';
 	import type { PageData } from '../../routes/$types';
@@ -17,6 +17,7 @@
 	let loading = false;
 	let photosPage = 1;
 	let masonry: Masonry | undefined;
+	let MasonryClass: typeof Masonry;
 
 	$: if (value !== $page.url.searchParams.get('query')) {
 		photos = [];
@@ -40,16 +41,19 @@
 		photos = [...photos, ...(await getPhotos(value ?? undefined, photosPage)).photos];
 	}
 
-	afterNavigate(async () => {
-		const Masonry = (await import('masonry-layout')).default;
+	async function reorganizeMasonryGallery() {
+		MasonryClass = (await import('masonry-layout')).default;
 
-		masonry = new Masonry('.gallery', {
+		masonry = new MasonryClass('.gallery', {
 			itemSelector: '.gallery-item',
 			percentPosition: true,
 			transitionDuration: 0,
 			gutter: 24
 		});
-	});
+	}
+
+	onMount(reorganizeMasonryGallery);
+	afterNavigate(reorganizeMasonryGallery);
 
 	onDestroy(() => {
 		masonry?.destroy?.();

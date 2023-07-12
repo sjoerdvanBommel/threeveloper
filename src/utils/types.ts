@@ -4,13 +4,26 @@ export interface Photo {
 	alt_description?: string;
 	urls: {
 		full: string;
-		raw: string;
-		regular: string;
 		small: string;
 		thumb: string;
 	};
 	likes: number;
-	name: string;
+	user: {
+		name: string;
+	};
 	width: number;
 	height: number;
+}
+
+export interface DetailedPhoto extends Photo {
+	user: {
+		name: string;
+		profile_image: {
+			medium: string;
+		};
+		portfolio_url?: string;
+	};
+	links: {
+		html: string;
+	};
 }
