@@ -6,10 +6,11 @@ import '@testing-library/jest-dom';
 import mediaQuery from 'css-mediaquery';
 import { readable } from 'svelte/store';
 import { afterAll, afterEach, beforeAll } from 'vitest';
+import { customOnUnhandledRequest } from './custom-on-unhandled-request';
 import { server } from './server';
 
 // Establish API mocking before all tests.
-beforeAll(() => server.listen());
+beforeAll(() => server.listen({ onUnhandledRequest: customOnUnhandledRequest }));
 
 // Reset any request handlers that we may add during the tests,
 // so they don't affect other tests.

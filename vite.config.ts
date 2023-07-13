@@ -6,6 +6,7 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
 		include: ['src/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
+		exclude: ['src/e2e/**/*'],
 		setupFiles: ['src/test/msw/setupTests.ts'],
 		globals: true,
 		environment: 'jsdom',
@@ -14,6 +15,7 @@ export default defineConfig({
 			exclude: [
 				...configDefaults.coverage.exclude,
 				'src/test/**/*',
+				'src/e2e/**/*',
 				'.svelte-kit/**/*',
 				'playwright.config.ts',
 				'postcss.config.cjs',

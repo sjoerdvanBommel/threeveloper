@@ -46,7 +46,9 @@
 				class="h-16 w-16 rounded-full mb-2 md:mb-0 mr-4 shrink-0"
 			/>
 			<div class="flex flex-col select-text text-center md:text-start">
-				<span class="text-3xl md:text-5xl mb-2">{photo.alt_description ?? photo.description}</span>
+				<span class="text-3xl md:text-5xl mb-2" data-testid="description"
+					>{photo.alt_description ?? photo.description}</span
+				>
 				<span class="text-lg md:text-xl"
 					>Photo by
 					{#if photo.user.portfolio_url || photo.links.html}

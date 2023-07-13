@@ -1,4 +1,5 @@
 import { browser, dev } from '$app/environment';
+import { customOnUnhandledRequest } from './custom-on-unhandled-request';
 
 /**
  * Lazy-inject the MSW handler so that no errors happen during
@@ -8,11 +9,11 @@ export async function inject() {
 	if (dev && browser) {
 		const { worker } = await import('./worker');
 
-		return worker.start().catch(console.warn);
+		return worker.start({ onUnhandledRequest: customOnUnhandledRequest });
 	}
 	if (dev && !browser) {
 		const { server } = await import('./server');
 
-		return server.listen();
+		return server.listen({ onUnhandledRequest: customOnUnhandledRequest });
 	}
 }
