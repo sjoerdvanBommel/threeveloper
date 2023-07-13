@@ -1,16 +1,16 @@
-import { error } from '@sveltejs/kit';
+import { fail } from '@sveltejs/kit';
 import type { DetailedPhoto } from '../../../utils/types';
 import { photosPerPage } from '../constants';
 import { unsplash } from '../unsplash';
 
-export async function getPhotos(query: string, page?: number) {
+export async function getPhotos(query: string, page = 1) {
 	const result = await unsplash.search.getPhotos({
 		query,
 		perPage: photosPerPage,
 		page
 	});
 
-	if (result.type === 'error') throw error(500, 'Internal server error');
+	if (result.type === 'error') return fail(result.status, result.response);
 
 	const photos: DetailedPhoto[] = result.response.results.map((photo) => ({
 		id: photo.id,

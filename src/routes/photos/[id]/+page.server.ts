@@ -6,27 +6,27 @@ import type { PageServerLoad } from './$types';
 export const load: PageServerLoad = async ({ params }): Promise<{ photo: DetailedPhoto }> => {
 	const { id } = params;
 
-	const { response: photo, type } = await unsplash.photos.get({ photoId: id });
+	const { response, type } = await unsplash.photos.get({ photoId: id });
 
-	if (type === 'error') throw error(500, 'Internal server error');
+	if (type === 'error') throw error(500, response);
 
 	return {
 		photo: {
-			height: photo.height,
-			id: photo.id,
-			likes: photo.likes,
-			urls: photo.urls,
+			height: response.height,
+			id: response.id,
+			likes: response.likes,
+			urls: response.urls,
 			user: {
-				name: photo.user.name,
-				portfolio_url: photo.user.portfolio_url ?? undefined,
-				profile_image: photo.user.profile_image
+				name: response.user.name,
+				portfolio_url: response.user.portfolio_url ?? undefined,
+				profile_image: response.user.profile_image
 			},
 			links: {
-				html: photo.links.html
+				html: response.links.html
 			},
-			width: photo.width,
-			alt_description: photo.alt_description ?? undefined,
-			description: photo.description ?? undefined
+			width: response.width,
+			alt_description: response.alt_description ?? undefined,
+			description: response.description ?? undefined
 		}
 	};
 };
