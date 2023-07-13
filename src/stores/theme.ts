@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 
-const localStorageKey = 'theme';
+export const localStorageKey = 'theme';
 
 export enum Themes {
 	Light = 'light',
@@ -13,5 +13,6 @@ const localStorageTheme = (browser && localStorage.getItem(localStorageKey)) || 
 export const theme = writable(localStorageTheme);
 
 theme.subscribe((value) => {
-	if (browser) localStorage.setItem('theme', value === 'dark' ? 'dark' : 'light');
+	if (browser)
+		localStorage.setItem(localStorageKey, value === Themes.Dark ? Themes.Dark : Themes.Light);
 });

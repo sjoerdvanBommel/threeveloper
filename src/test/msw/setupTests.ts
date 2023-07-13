@@ -3,6 +3,7 @@ import type * as NavigationType from '$app/navigation';
 import type * as StoresType from '$app/stores';
 import type { Navigation, Page } from '@sveltejs/kit';
 import '@testing-library/jest-dom';
+import mediaQuery from 'css-mediaquery';
 import { readable } from 'svelte/store';
 import { afterAll, afterEach, beforeAll } from 'vitest';
 import { server } from './server';
@@ -18,19 +19,23 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 // Define mock implementations for methods that are not implemented by JSDOM yet
-Object.defineProperty(window, 'matchMedia', {
-	writable: true,
-	value: vi.fn().mockImplementation((query) => ({
-		matches: false,
-		media: query,
-		onchange: null,
-		addListener: vi.fn(), // deprecated
-		removeListener: vi.fn(), // deprecated
-		addEventListener: vi.fn(),
-		removeEventListener: vi.fn(),
-		dispatchEvent: vi.fn()
-	}))
-});
+setScreenSize(1920);
+
+export function setScreenSize(width: number) {
+	Object.defineProperty(window, 'matchMedia', {
+		writable: true,
+		value: vi.fn().mockImplementation((query) => ({
+			matches: mediaQuery.match(query, { width }),
+			media: '',
+			onchange: null,
+			addListener: vi.fn(), // deprecated
+			removeListener: vi.fn(), // deprecated
+			addEventListener: vi.fn(),
+			removeEventListener: vi.fn(),
+			dispatchEvent: vi.fn()
+		}))
+	});
+}
 
 // Mock SvelteKit runtime module $app/environment
 vi.mock('$app/environment', (): typeof EnvironmentType => ({

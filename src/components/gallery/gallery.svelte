@@ -7,8 +7,8 @@
 	import { fade } from 'svelte/transition';
 	import { getPhotos } from '../../clients/unsplash/search/get-photos';
 	import type { PageData } from '../../routes/$types';
+	import { infiniteScroll } from '../../utils/actions/infinite-scroll';
 	import { debounce } from '../../utils/directives/debounce';
-	import { infiniteScroll } from '../../utils/directives/infinite-scroll';
 	import DiamondSpinner from '../spinners/diamond-spinner.svelte';
 	import GalleryItem from './gallery-item.svelte';
 

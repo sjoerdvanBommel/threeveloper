@@ -1,7 +1,7 @@
 import { PUBLIC_API_BASE_URL } from '$env/static/public';
 import { rest } from 'msw';
 import { photosPerPage } from '../../services/unsplash/constants';
-import { mockPhotos } from '../mock-data/photos';
+import { mockPhotos } from '../mocks/photos';
 
 export const localHandlers = [
 	rest.get(`${PUBLIC_API_BASE_URL}/unsplash-proxy/search/photos`, (req, res, ctx) => {
