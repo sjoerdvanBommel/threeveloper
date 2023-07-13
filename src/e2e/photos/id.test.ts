@@ -15,7 +15,7 @@ test.describe.parallel('/photos/{id}', () => {
 		await page.goto(`${baseURL}/photos/${photoWithoutAltDescription.id}`);
 		await expect(page.getByText(photoWithoutAltDescription.description!)).toBeVisible();
 
-		const photoWithoutAnyDescription = mockPhotos[4];
+		const photoWithoutAnyDescription = mockPhotos[51];
 		await page.goto(`${baseURL}/photos/${photoWithoutAnyDescription.id}`);
 		await expect(page.getByTestId('description')).not.toBeVisible();
 	});

@@ -103,6 +103,7 @@ export const mockPhotos: DetailedPhoto[] = [
 	},
 	{
 		id: '2l0CWTpcChI',
+		alt_description: "dog's face",
 		urls: {
 			full: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw1fHxkb2d8ZW58MHx8fHwxNjg5MTU1NzY0fDA&ixlib=rb-4.0.3&q=85',
 			small:
@@ -1288,7 +1289,6 @@ export const mockPhotos: DetailedPhoto[] = [
 	},
 	{
 		id: 'n4TfO-ITgPc',
-		alt_description: 'brown long coated dog sitting on gray concrete floor during daytime',
 		urls: {
 			full: 'https://images.unsplash.com/photo-1600352712371-15fd49ca42b5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NzAwNTZ8MHwxfHNlYXJjaHw4Mnx8ZG9nfGVufDB8fHx8MTY4OTE5NzI0M3ww&ixlib=rb-4.0.3&q=85',
 			small:

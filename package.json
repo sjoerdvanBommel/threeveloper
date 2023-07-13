@@ -9,7 +9,7 @@
 		"test": "npm run test:e2e && npm run test:unit",
 		"test:unit": "vitest",
 		"test:coverage": "vitest run --coverage.enabled --coverage.all",
-		"test:e2e": "cross-env PUBLIC_MSW_ENABLED=true && concurrently -k \"npm run dev -- --port 4173\" \"playwright test\"",
+		"test:e2e": "cross-env PUBLIC_MSW_ENABLED=true && playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
