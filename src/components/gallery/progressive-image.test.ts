@@ -16,12 +16,16 @@ describe('ProgressiveImage', () => {
 		expect(image).toHaveAttribute('src', 'High Quality URL');
 	});
 
-	test('accepts img specific properties', async () => {
+	test('accepts native img properties', async () => {
 		render(ProgressiveImage, {
 			lowQualityUrl: 'Low Quality URL',
 			highQualityUrl: 'High Quality URL',
 			alt: 'Alt text',
-			srcset: 'Would throw a compile error if not accepted'
+			'aria-label': 'Would throw a compile error if not accepted'
 		});
+
+		const image = screen.getByRole('img');
+
+		expect(image).toHaveAttribute('aria-label', 'Would throw a compile error if not accepted');
 	});
 });

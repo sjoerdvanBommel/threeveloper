@@ -1,7 +1,7 @@
 import type { ActionReturn } from 'svelte/action';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-function debounce(fn: Function, delay: number) {
+function waitForMs(fn: Function, delay: number) {
 	let timer: NodeJS.Timeout;
 
 	return function (...args: []) {
@@ -10,12 +10,12 @@ function debounce(fn: Function, delay: number) {
 	};
 }
 
-export default function debounceDirective(node: HTMLElement, delay = 500): ActionReturn {
+export function debounce(node: HTMLElement, delay = 500): ActionReturn {
 	if (!delay || delay <= 0) {
 		throw new Error('Debounce delay must be a positive number greater than zero.');
 	}
 
-	const debouncedFunction = debounce((event: Event) => {
+	const debouncedFunction = waitForMs((event: Event) => {
 		const customEvent = new CustomEvent('debounced', { detail: event });
 		node.dispatchEvent(customEvent);
 	}, delay);
