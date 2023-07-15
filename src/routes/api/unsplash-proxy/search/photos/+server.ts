@@ -1,5 +1,5 @@
+import { getPhotos } from '@services/unsplash/get-photos';
 import { json } from '@sveltejs/kit';
-import { getPhotos } from '../../../../../services/unsplash/search/get-photos';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async ({ url }) => {

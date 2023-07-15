@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Themes, theme } from '../../stores/theme';
+	import { Themes, theme } from '@stores/theme';
 
 	const toggleDarkMode = () => theme.set($theme === Themes.Light ? Themes.Dark : Themes.Light);
 

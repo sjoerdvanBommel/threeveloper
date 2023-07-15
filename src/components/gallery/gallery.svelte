@@ -1,15 +1,14 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { afterNavigate, goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { getPhotos } from '@clients/unsplash/get-photos';
+	import DiamondSpinner from '@components/spinners/diamond-spinner.svelte';
+	import { infiniteScroll } from '@utils/actions/infinite-scroll';
+	import { debounce } from '@utils/directives/debounce';
 	import type Masonry from 'masonry-layout';
 	import { onDestroy, onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { getPhotos } from '../../clients/unsplash/search/get-photos';
 	import type { PageData } from '../../routes/$types';
-	import { infiniteScroll } from '../../utils/actions/infinite-scroll';
-	import { debounce } from '../../utils/directives/debounce';
-	import DiamondSpinner from '../spinners/diamond-spinner.svelte';
 	import GalleryItem from './gallery-item.svelte';
 
 	export let photos: PageData['photos'];
@@ -23,13 +22,6 @@
 		photos = [];
 	}
 
-	$: if (photos?.length && browser) {
-		requestAnimationFrame(() => {
-			masonry?.reloadItems?.();
-			masonry?.layout?.();
-		});
-	}
-
 	async function search() {
 		await goto(`?query=${value}`, { keepFocus: true });
 		loading = false;
@@ -39,9 +31,14 @@
 		photosPage++;
 
 		photos = [...photos, ...(await getPhotos(value ?? undefined, photosPage)).photos];
+
+		requestAnimationFrame(() => {
+			masonry?.reloadItems?.();
+			masonry?.layout?.();
+		});
 	}
 
-	async function reorganizeMasonryGallery() {
+	async function createMasonryGallery() {
 		MasonryClass = (await import('masonry-layout')).default;
 
 		masonry = new MasonryClass('.gallery', {
@@ -52,8 +49,8 @@
 		});
 	}
 
-	onMount(reorganizeMasonryGallery);
-	afterNavigate(reorganizeMasonryGallery);
+	onMount(createMasonryGallery);
+	afterNavigate(createMasonryGallery);
 
 	onDestroy(() => {
 		masonry?.destroy?.();

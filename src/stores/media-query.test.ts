@@ -1,5 +1,5 @@
+import { setScreenSize } from '@test/msw/setupTests';
 import { get } from 'svelte/store';
-import { setScreenSize } from '../test/msw/setupTests';
 import { createMediaQueryStore } from './media-query';
 
 describe('createMediaQueryStore', () => {

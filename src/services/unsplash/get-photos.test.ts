@@ -1,6 +1,6 @@
+import { server } from '@test/msw/server';
+import type { Photo } from '@utils/photo/types';
 import { rest } from 'msw';
-import { server } from '../../../test/msw/server';
-import type { Photo } from '../../../utils/types';
 import { getPhotos } from './get-photos';
 
 describe('getPhotos', () => {
@@ -25,7 +25,7 @@ describe('getPhotos', () => {
 
 	it('throws HttpError when fetch failed', async () => {
 		server.use(
-			rest.get(`https://api.unsplash.com/search/photos`, (req, res, ctx) => {
+			rest.get(`https://api.unsplash.com/search/photos`, (_, res, ctx) => {
 				return res(ctx.status(400));
 			})
 		);

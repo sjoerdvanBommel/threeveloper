@@ -1,5 +1,5 @@
-import { mockPhotos } from '../../test/mocks/photos';
-import { expect, test } from '../../test/msw';
+import { mockPhotos } from '@test/mocks/photos';
+import { expect, test } from '@test/msw/test';
 
 const photo = mockPhotos[0];
 

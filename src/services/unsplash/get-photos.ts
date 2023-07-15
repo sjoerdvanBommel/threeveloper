@@ -1,7 +1,7 @@
 import { fail } from '@sveltejs/kit';
-import type { DetailedPhoto } from '../../../utils/types';
-import { photosPerPage } from '../constants';
-import { unsplash } from '../unsplash';
+import type { DetailedPhoto } from '@utils/photo/types';
+import { photosPerPage } from './constants';
+import { unsplash } from './unsplash';
 
 export async function getPhotos(query: string, page = 1) {
 	const result = await unsplash.search.getPhotos({

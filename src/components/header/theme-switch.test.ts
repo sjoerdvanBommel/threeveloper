@@ -1,7 +1,7 @@
+import { theme } from '@stores/theme';
 import { render, screen } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
 import { get } from 'svelte/store';
-import { theme } from '../../stores/theme';
 import ThemeSwitch from './theme-switch.svelte';
 
 describe('ThemeSwitch', () => {

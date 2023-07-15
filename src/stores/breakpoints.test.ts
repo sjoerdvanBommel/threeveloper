@@ -1,5 +1,5 @@
+import { setScreenSize } from '@test/msw/setupTests';
 import { get } from 'svelte/store';
-import { setScreenSize } from '../test/msw/setupTests';
 import { is2Xl, isLg, isMd, isSm, isSmaller, isXl } from './breakpoints';
 
 describe('breakpoints', () => {

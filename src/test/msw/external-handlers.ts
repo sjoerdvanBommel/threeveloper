@@ -1,6 +1,6 @@
+import { photosPerPage } from '@services/unsplash/constants';
+import { mockPhotos } from '@test/mocks/photos';
 import { rest } from 'msw';
-import { photosPerPage } from '../../services/unsplash/constants';
-import { mockPhotos } from '../mocks/photos';
 
 export const externalHandlers = [
 	rest.get(`https://api.unsplash.com/search/photos`, (req, res, ctx) => {

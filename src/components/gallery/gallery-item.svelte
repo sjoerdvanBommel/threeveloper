@@ -1,8 +1,8 @@
 <script lang="ts">
+	import { isSm, isSmaller } from '@stores/breakpoints';
+	import { getPhotoVariantDimensions } from '@utils/photo/get-photo-variant-dimensions';
+	import type { Photo } from '@utils/photo/types';
 	import { fly } from 'svelte/transition';
-	import { isSm, isSmaller } from '../../stores/breakpoints';
-	import { getPhotoVariantDimensions } from '../../utils/get-photo-dimensions';
-	import type { Photo } from '../../utils/types';
 	import ProgressiveImage from './progressive-image.svelte';
 
 	export let photo: Photo;

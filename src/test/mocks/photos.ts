@@ -1,4 +1,4 @@
-import type { DetailedPhoto } from '../../utils/types';
+import type { DetailedPhoto } from '@utils/photo/types';
 
 export const mockPhotos: DetailedPhoto[] = [
 	{

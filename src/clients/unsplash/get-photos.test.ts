@@ -1,5 +1,5 @@
+import { mockPhotos } from '@test/mocks/photos';
 import { describe, expect, it } from 'vitest';
-import { mockPhotos } from '../../../test/mocks/photos';
 import { getPhotos } from './get-photos';
 
 describe('getPhotos', () => {

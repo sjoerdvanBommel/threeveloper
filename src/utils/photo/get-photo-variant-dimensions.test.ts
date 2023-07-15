@@ -1,4 +1,4 @@
-import { getPhotoVariantDimensions } from './get-photo-dimensions';
+import { getPhotoVariantDimensions } from './get-photo-variant-dimensions';
 import type { Photo } from './types';
 
 describe('getPhotoVariantDimensions', () => {

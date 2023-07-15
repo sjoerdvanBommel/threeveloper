@@ -9,7 +9,22 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"types": ["vitest/globals"]
+		"types": ["vitest/globals"],
+		"baseUrl": ".",
+		"paths": {
+			"@clients": ["./src/clients"],
+			"@clients/*": ["./src/clients/*"],
+			"@components": ["./src/components"],
+			"@components/*": ["./src/components/*"],
+			"@services": ["./src/services"],
+			"@services/*": ["./src/services/*"],
+			"@stores/*": ["./src/stores/*"],
+			"@stores": ["./src/stores"],
+			"@utils": ["./src/utils"],
+			"@utils/*": ["./src/utils/*"],
+			"@test": ["./src/test"],
+			"@test/*": ["./src/test/*"]
+		}
 	},
 	"include": ["src/**/*.ts", ".svelte-kit/ambient.d.ts"],
 	"ts-node": {

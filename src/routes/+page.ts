@@ -1,6 +1,6 @@
 import type { Load } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
-import type { Photo } from '../utils/types';
+import type { Photo } from '@utils/photo/types';
 
 export const load: Load = async ({ fetch, url }) => {
 	const query = url.searchParams.get('query');

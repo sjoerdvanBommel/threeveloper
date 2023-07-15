@@ -1,10 +1,10 @@
-import { PUBLIC_API_BASE_URL } from '$env/static/public';
+import { PUBLIC_BASE_URL } from '$env/static/public';
+import { photosPerPage } from '@services/unsplash/constants';
+import { mockPhotos } from '@test/mocks/photos';
 import { rest } from 'msw';
-import { photosPerPage } from '../../services/unsplash/constants';
-import { mockPhotos } from '../mocks/photos';
 
 export const localHandlers = [
-	rest.get(`${PUBLIC_API_BASE_URL}/unsplash-proxy/search/photos`, (req, res, ctx) => {
+	rest.get(`${PUBLIC_BASE_URL}/api/unsplash-proxy/search/photos`, (req, res, ctx) => {
 		const query = req.url.searchParams.get('query')!;
 		const page = +req.url.searchParams.get('page')!;
 

@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { Themes, theme } from '@stores/theme';
 	import { fade } from 'svelte/transition';
-	import { Themes, theme } from '../../stores/theme';
 	import ThemeSwitch from './theme-switch.svelte';
 </script>
 

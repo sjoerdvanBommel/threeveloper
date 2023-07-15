@@ -1,4 +1,4 @@
-// @ts-expect-error -- Export config is available in @sveltejs/kit/package.json
+// @ts-expect-error -- sveltekit is exported via package.json. TS only checks folder structure
 import { sveltekit } from '@sveltejs/kit/vite';
 import { configDefaults, defineConfig } from 'vitest/config';
 
@@ -28,7 +28,7 @@ export default defineConfig({
 	},
 	resolve: {
 		alias: {
-			timers: './src/test/polyfills/timers.js'
+			timers: 'rollup-plugin-node-polyfills/polyfills/timers'
 		}
 	}
 });

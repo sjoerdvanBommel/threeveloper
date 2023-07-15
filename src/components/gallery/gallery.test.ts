@@ -1,10 +1,10 @@
 import type { Page } from '@sveltejs/kit';
+import { mockPhotos } from '@test/mocks/photos';
+import { navigationParams } from '@test/msw/setupTests';
 import { render, screen } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
+import type { Photo } from '@utils/photo/types';
 import { readable } from 'svelte/store';
-import { mockPhotos } from '../../test/mocks/photos';
-import { navigationParams } from '../../test/msw/setupTests';
-import type { Photo } from '../../utils/types';
 import Gallery from './gallery.svelte';
 
 const defaultPageValues: Page = vi.hoisted(() => ({

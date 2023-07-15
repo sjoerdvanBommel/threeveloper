@@ -1,8 +1,8 @@
 <script lang="ts">
+	import ProgressiveImage from '@components/gallery/progressive-image.svelte';
+	import BackIcon from '@components/icons/back-icon.svelte';
+	import { isSm, isSmaller } from '@stores/breakpoints';
 	import { fade, fly } from 'svelte/transition';
-	import ProgressiveImage from '../../../components/gallery/progressive-image.svelte';
-	import BackIcon from '../../../components/icons/back-icon.svelte';
-	import { isSm, isSmaller } from '../../../stores/breakpoints';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

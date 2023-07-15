@@ -1,7 +1,7 @@
+import { mockPhotos } from '@test/mocks/photos';
 import { fireEvent, render, screen } from '@testing-library/svelte';
-import { mockPhotos } from '../../test/mocks/photos';
-import { getPhotoVariantDimensions } from '../../utils/get-photo-dimensions';
-import type { Photo } from '../../utils/types';
+import { getPhotoVariantDimensions } from '@utils/photo/get-photo-variant-dimensions';
+import type { Photo } from '@utils/photo/types';
 import GalleryItem from './gallery-item.svelte';
 
 describe('GalleryItem', () => {

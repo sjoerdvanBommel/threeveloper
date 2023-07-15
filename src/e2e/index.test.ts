@@ -1,4 +1,4 @@
-import { expect, test } from '../test/msw';
+import { expect, test } from '@test/msw/test';
 
 test.describe.parallel('/', () => {
 	test('filters photos based on query', async ({ page }) => {
