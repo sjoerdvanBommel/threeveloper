@@ -17,14 +17,14 @@ test.describe.parallel('/', () => {
 	test('changes to dark theme when theme switcher is pressed', async ({ page }) => {
 		await expect(page.getByRole('img', { name: 'Threeveloper logo' })).toHaveAttribute(
 			'src',
-			'/images/threeveloper logo transparent.png'
+			'/images/logo.svg'
 		);
 
 		await page.getByRole('switch', { name: 'Dark mode toggle' }).click();
 
 		await expect(page.getByRole('img', { name: 'Threeveloper logo ' })).toHaveAttribute(
 			'src',
-			'/images/threeveloper logo transparent light.png'
+			'/images/logo light.svg'
 		);
 	});
 

@@ -14,7 +14,7 @@
 	const { width, height } = getPhotoVariantDimensions(photo);
 </script>
 
-<div class="relative mb-6" transition:fly|global={flyParams}>
+<div class="relative mb-6 shadow-lg" transition:fly|global={flyParams}>
 	<a
 		href={`/photos/${photo.id}`}
 		data-sveltekit-noscroll

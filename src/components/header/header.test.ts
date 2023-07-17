@@ -8,7 +8,7 @@ describe('Header', () => {
 		render(Header);
 
 		const logo = screen.getByAltText('Threeveloper logo');
-		expect(logo).toHaveAttribute('src', '/images/threeveloper logo transparent.png');
+		expect(logo).toHaveAttribute('src', '/images/logo.svg');
 	});
 
 	it('shows light logo when theme is dark', () => {
@@ -17,6 +17,6 @@ describe('Header', () => {
 		render(Header);
 
 		const logo = screen.getByAltText('Threeveloper logo');
-		expect(logo).toHaveAttribute('src', '/images/threeveloper logo transparent light.png');
+		expect(logo).toHaveAttribute('src', '/images/logo light.svg');
 	});
 });

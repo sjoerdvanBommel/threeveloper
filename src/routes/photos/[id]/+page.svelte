@@ -33,7 +33,7 @@
 	</div>
 
 	<div
-		class="grow flex flex-col justify-between relative p-10 select-none bg-gradient-to-t from-white/70 from-0% to-white/0 to-25%"
+		class="grow flex flex-col justify-between relative p-10 select-none bg-gradient-to-t from-white/80 from-0% to-white/0 to-25%"
 		in:fade|global
 	>
 		<div>

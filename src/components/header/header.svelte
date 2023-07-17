@@ -4,16 +4,16 @@
 	import ThemeSwitch from './theme-switch.svelte';
 </script>
 
-<header class="flex justify-between h-28 md:h-32 lg:h-36 xl:h-40 w-full py-4 px-6" transition:fade>
+<header
+	class="flex justify-between h-28 md:h-32 lg:h-36 xl:h-40 w-full py-4 px-6 lg:px-10"
+	transition:fade
+>
 	<img
-		src={`/images/threeveloper logo transparent${$theme === Themes.Dark ? ' light' : ''}.png`}
+		class="p-4"
+		src={`/images/logo${$theme === Themes.Dark ? ' light' : ''}.svg`}
 		alt="Threeveloper logo"
 	/>
-	<h1
-		class="bg-clip-text font-headings text-center bg-gradient-to-r from-title-primary to-title-secondary text-transparent break-all h-full flex items-center"
-	>
-		Gallery App
-	</h1>
+	<h1 class="text-center break-word h-fit flex self-center text-black">Unsplash gallery</h1>
 	<div>
 		<ThemeSwitch />
 	</div>
