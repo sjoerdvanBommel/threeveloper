@@ -2,29 +2,9 @@
 	let cookiesCollected = 0;
 </script>
 
-<div>
-	<button on:click={() => cookiesCollected++}>Collect cookie</button>
-	<span>{cookiesCollected} cookies collected</span>
+<div class="flex flex-col items-center justify-center h-screen w-screen">
+	<button on:click={() => cookiesCollected++} class="rounded-full aspect-square bg-amber-200 p-4">
+		Collect cookie
+	</button>
+	<span class="text-5xl">{cookiesCollected} cookies collected</span>
 </div>
-
-<style>
-	div {
-		display: flex;
-		flex-direction: column;
-		width: 100vw;
-		height: 100vh;
-		justify-content: center;
-		align-items: center;
-	}
-
-	button {
-		border-radius: 9999px;
-		aspect-ratio: 1;
-		background-color: burlywood;
-		padding: 1rem;
-	}
-
-	span {
-		font-size: 3rem;
-	}
-</style>
