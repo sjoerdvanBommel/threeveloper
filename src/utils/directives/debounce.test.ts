@@ -1,7 +1,7 @@
 import { debounce } from './debounce';
 
-// TODO: Implement when `svelte-htm` package supports svelte 4
 describe('debounce', () => {
+	// Implement when `svelte-htm` package supports svelte 4
 	it.todo(
 		'dispatches debounced event after specified amount of milliseconds of input change',
 		() => {
@@ -11,6 +11,7 @@ describe('debounce', () => {
 		}
 	);
 
+	// Implement when `svelte-htm` package supports svelte 4
 	it.todo('returns destroy method to stop debouncing after input changes');
 
 	it('throws when delay is 0', () => {
