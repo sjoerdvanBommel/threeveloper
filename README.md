@@ -15,7 +15,7 @@ I honestly believe that, at the end of this tutorial series, you **don't want to
 - **ESLint** served as the linter to detect potential bugs and inconsistencies
 - **Prettier** was used to maintain consistent code formatting
 
-Go check out the **[YouTube tutorial series](https://TODO:)**!
+Go check out the **[YouTube tutorial series](https://www.youtube.com/watch?v=6Vrc1VO8pgs&list=PL1YJW01TGCGlUij-TXDIwgoLTpamTsjUJ)**!
 
 ### Demo
 
