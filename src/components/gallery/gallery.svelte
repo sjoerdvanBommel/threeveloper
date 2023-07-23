@@ -69,12 +69,15 @@
 		transition:fade={{ duration: 200 }}
 	/>
 </div>
+
 {#if loading}
 	<div class="w-full grow flex justify-center items-center">
 		<DiamondSpinner />
 	</div>
 {:else if !photos.length}
-	<span class="text-2xl text-center inline-block w-full">Search to get a list of photos</span>
+	<span class="text-2xl text-center inline-block w-full">
+		There are currently no images to show
+	</span>
 {:else}
 	<div class="gallery" use:infiniteScroll={loadMorePhotos}>
 		{#each photos as photo, i}

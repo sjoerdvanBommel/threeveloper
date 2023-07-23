@@ -8,6 +8,6 @@
 
 <Header />
 
-<main class="w-full grow mt-8 flex flex-col px-6 pb-6">
+<main class="w-full grow flex flex-col p-6">
 	<Gallery photos={data.photos} />
 </main>

@@ -17,12 +17,10 @@
 {#if isReady}
 	<div
 		id="scroll-root"
-		class={`${$theme}-theme overflow-y-scroll h-screen`}
+		class={`${$theme}-theme overflow-y-scroll h-screen text-black`}
 		data-sveltekit-reload={dev && PUBLIC_MSW_ENABLED === 'true' ? true : 'off'}
 	>
-		<div class={`h-full flex flex-col text-black`}>
-			<div id="background" class="w-full h-full bg-white fixed inset-0 -z-10" />
-			<slot />
-		</div>
+		<div class="bg-white fixed inset-0 -z-10" />
+		<slot />
 	</div>
 {/if}
