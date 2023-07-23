@@ -4,7 +4,7 @@
 	import { theme } from '@stores/theme';
 	import '../app.postcss';
 
-	const isMswEnabled = (dev && PUBLIC_MSW_ENABLED === 'true') || PUBLIC_E2E_TESTING === 'true';
+	const isMswEnabled = PUBLIC_MSW_ENABLED === 'true' || PUBLIC_E2E_TESTING === 'true';
 	let isReady = !isMswEnabled;
 
 	if (isMswEnabled) {
