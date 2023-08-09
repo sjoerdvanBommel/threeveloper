@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Bebas Neue";
+  position: static;
+}
+
+.activities {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+}
+
+.activity {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.activity {
+  cursor: pointer;
+}
+
+.activity img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.activity img.scene {
+  height: 25vw;
+}
+
+.activity img.item {
+  width: 14vw;
+}
+
+span {
+  font-size: 1.8vw;
+}
+
+h2 {
+  font-size: 15vw;
+  line-height: 2em;
+  margin: -0.5em 0;
+  text-wrap: nowrap;
+  position: relative;
+}
+
+.context {
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+  /* position: relative; */
+}
+
+.active .context {
+  opacity: 100%;
+}
+
+.context,
+.context img {
+  transform: translateX(-10vw);
+  transition: transform 1s ease-out, opacity 400ms ease-out;
+}
+
+.active .context,
+.active .context img {
+  transform: translateX(0);
+  transition: transform 1s ease-out, opacity 400ms 300ms ease-out;
+}
+
+.active ~ .activity .context,
+.active ~ .activity .context img {
+  transform: translateX(10vw);
+}
+
+[data-item="popcorn"] {
+  color: #f86914;
+}
+
+[data-item="bowling"] {
+  color: #52b1ff;
+}
+
+[data-item="skate"] {
+  color: #93ca14;
+}
+
+[data-item="chess"] {
+  color: #2a050a;
+}
+
+[data-item="popcorn"] img.item {
+  width: 14vw;
+  top: 7vw;
+}
+
+[data-item="bowling"] img.item {
+  width: 18vw;
+  top: 10vw;
+}
+
+[data-item="skate"] img.item {
+  width: 23vw;
+  top: 10vw;
+}
+
+[data-item="chess"] img.item {
+  width: 18vw;
+  top: 10vw;
+}
+
+.background svg {
+  min-width: 100vw;
+  min-height: 250vh;
+  position: absolute;
+  animation: 1s forwards to-top;
+}
+
+@keyframes to-top { 
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-60%);
+  }
+}
