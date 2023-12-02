@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <title>Fancy Dark Theme</title>
+  </head>
+  <body>
+    <div class="root">
+      <div class="glow"></div>
+      <div class="grid">
+        <svg
+          id="grid-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 800 400"
+        >
+          <pattern
+            id="pattern-inside"
+            x="0"
+            y="0"
+            width="10"
+            height="10"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              fill="transparent"
+              stroke="white"
+              stroke-width="0.2"
+              x="0"
+              width="10"
+              height="10"
+              y="0"
+            ></rect>
+          </pattern>
+
+          <pattern
+            id="pattern-checkers"
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              fill="transparent"
+              stroke="white"
+              stroke-width="1"
+              x="0"
+              width="80"
+              height="80"
+              y="0"
+            ></rect>
+          </pattern>
+
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="url(#pattern-checkers)"
+          ></rect>
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="url(#pattern-inside)"
+          ></rect>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="gradient-text basic">
+          <span>Build this landing page</span>
+        </br>
+          <span class="big"
+            >In <span class="gradient-text fancy">5 minutes</span></span
+          >
+        </div>
+        <a href="https://www.youtube.com/@threeveloper" target="_blank"
+          ><span>Learn how</span></a
+        >
+      </div>
+      <div id="bubbles"></div>
+      <div class="dashboard"></div>
+    </div>
+  </body>
+</html>
