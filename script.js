@@ -22,18 +22,22 @@ setInterval(() => {
 
   bubblesContainer.appendChild(bubble);
 
-  setTimeout(() => {
-    bubble.style.top = "-6px";
-  }, 100);
 
-  bubble.style.setProperty("--size", `${Math.random() * 3 + 3}px`);
-  bubble.style.setProperty("--duration", `${Math.random() * 30 + 10}s`);
+  const durationSeconds = Math.random() * 30 + 10;
+  const sizePx = Math.random() * 4 + 4;
+
+  requestAnimationFrame(() => {
+    bubble.style.top = `-${sizePx}px`;
+  });
+
+  bubble.style.setProperty("--size", `${sizePx}px`);
+  bubble.style.setProperty("--duration", `${durationSeconds}s`);
   bubble.style.setProperty("--opacity", `${Math.random() * 80 + 20}%`);
   const randomColorIndex = Math.floor(Math.random() * colors.length);
 
   bubble.style.backgroundColor = colors[randomColorIndex];
 
-  bubble.ontransitionend = () => {
+  setTimeout(() => {
     bubblesContainer.removeChild(bubble);
-  };
-}, 100);
+  }, durationSeconds * 1000);
+}, 10);

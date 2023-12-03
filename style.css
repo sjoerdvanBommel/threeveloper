@@ -7,7 +7,7 @@ h1 {
 
 body {
   height: 100vh;
-  background: #090909;
+  background: #050510;
   color: white;
   overflow: hidden;
 }
@@ -105,20 +105,26 @@ svg {
   border-radius: 50%;
   transition: top var(--duration) linear;
   opacity: var(--opacity);
-  filter: blur(2px);
+  /* filter: blur(1px); */
 }
 
-.dashboard {
-  width: 80%;
-  height: 300px;
+.dashboard-border {
   border-radius: 20px;
-  border: 2px solid #231414;
-  background: #090909;
+  background: linear-gradient(135deg, #e44141, #4f2af3);
   position: absolute;
   bottom: -200px;
   right: 0;
   left: 0;
   margin: 0 auto;
+  padding: 4px;
+  width: 80%;
+}
+
+.dashboard {
+  border-radius: inherit;
+  border: 2px solid #231414;
+  background: #050510;
+  height: 300px;
 }
 
 a {
@@ -127,12 +133,20 @@ a {
   background: linear-gradient(135deg, #e44141, #4f2af3);
 
   & span {
-    margin: 3px;
+    margin: 1px;
     padding: 20px 40px;
     font-size: 2rem;
     display: inline-block;
     border-radius: inherit;
-    background: #090909;
+    background: #050510;
     color: white;
   }
 }
+
+.fancy-text {
+  background: linear-gradient(0, #e44141, #4f2af3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
