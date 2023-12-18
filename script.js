@@ -1,43 +1,39 @@
-const rows = 20;
-const cols = 6;
-const gridRectSize = 80;
-const svg = document.getElementById("grid-svg");
-svg?.setAttribute(
-  "viewBox",
-  `0 0 ${rows * gridRectSize} ${cols * gridRectSize}`
-);
+const between = (min, max) => Math.random() * (max - min) + min
 
 const bubblesContainer = document.getElementById("bubbles");
 const colors = ["#e44141", "#4f2af3"];
 
 setInterval(() => {
-  if (Math.random() < 0.9) return;
-
   const bubble = document.createElement("div");
   bubble.classList.add("bubble");
-
-  const xPos = Math.random() * bubblesContainer.clientWidth;
-  bubble.style.left = `${xPos}px`;
-  bubble.style.top = "100%";
-
+  
   bubblesContainer.appendChild(bubble);
 
+  bubble.style.left = `${between(0, 100)}%`;
 
-  const durationSeconds = Math.random() * 30 + 10;
-  const sizePx = Math.random() * 4 + 4;
+  const sizePx = `${between(4, 8)}px`;
 
-  requestAnimationFrame(() => {
-    bubble.style.top = `-${sizePx}px`;
-  });
+  const floatingBubbleKeyFrames = [
+    { top: '100%' },
+    { top: `-${sizePx}` }
+  ]
 
-  bubble.style.setProperty("--size", `${sizePx}px`);
-  bubble.style.setProperty("--duration", `${durationSeconds}s`);
-  bubble.style.setProperty("--opacity", `${Math.random() * 80 + 20}%`);
-  const randomColorIndex = Math.floor(Math.random() * colors.length);
+  const floatingAnimation = bubble.animate(
+    floatingBubbleKeyFrames,
+    between(10000, 40000),
+  );
 
-  bubble.style.backgroundColor = colors[randomColorIndex];
-
-  setTimeout(() => {
+  floatingAnimation.onfinish = () => {
     bubblesContainer.removeChild(bubble);
-  }, durationSeconds * 1000);
-}, 10);
+  }
+
+  bubble.style.width = sizePx;
+  bubble.style.height = sizePx;
+
+  const colors = ["#e44141", "#4f2af3"];
+  const randomColorIndex = 
+    Math.floor(Math.random() * colors.length);
+  bubble.style.background = colors[randomColorIndex];
+
+  bubble.style.opacity = `${between(20, 100)}%`;
+}, 100);
